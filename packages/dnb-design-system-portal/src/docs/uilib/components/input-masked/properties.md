@@ -52,7 +52,7 @@ Defaults to Norwegian number format.
 | `integerLimit`              | (number): Limit the length of the integer number. Defaults to `null` for unlimited.                                                    |
 | `requireDecimal`            | (boolean): Whether or not to always include a decimal point and placeholder for decimal digits after the integer. Defaults to `false`. |
 | `allowNegative`             | (boolean): Whether or not to allow negative numbers. Defaults to `true`.                                                               |
-| `allowLeadingZeroes`        | (boolean): Whether or not to allow leading zeroes. Defaults to `false`.                                                                |
+| `allowLeadingZeroes`        | (boolean): Whether or not to allow leading zeroes. Defaults to `true`.                                                                 |
 
 ### Custom number mask usage
 

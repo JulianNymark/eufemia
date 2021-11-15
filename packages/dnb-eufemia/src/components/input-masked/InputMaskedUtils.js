@@ -247,6 +247,7 @@ export const handleCurrencyMask = ({ mask_options, currency_mask }) => {
     showMask: true,
     placeholderChar: null,
     allowDecimal: true,
+    allowLeadingZeroes: true,
     decimalLimit: 2,
     decimalSymbol: ',',
     ...mask_options,
@@ -277,6 +278,7 @@ export const handleCurrencyMask = ({ mask_options, currency_mask }) => {
 export const handleNumberMask = ({ mask_options, number_mask }) => {
   const maskParams = {
     decimalSymbol: ',',
+    allowLeadingZeroes: true,
     ...mask_options,
     ...number_mask,
   }
