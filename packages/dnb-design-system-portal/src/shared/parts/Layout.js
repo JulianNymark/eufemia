@@ -82,11 +82,13 @@ class Layout extends React.PureComponent {
   }
 
   isFullscreen() {
-    const { location, fullscreen } = this.props
+    const { fullscreen, location } = this.props
     return (
       fullscreen ||
       (typeof location !== 'undefined' &&
-        /fullscreen/.test(location.search))
+        /fullscreen/.test(location.search)) ||
+      (typeof window !== 'undefined' &&
+        /fullscreen/.test(window.location.search))
     )
   }
 
@@ -110,7 +112,16 @@ class Layout extends React.PureComponent {
             {!fs && <StickyMenuBar />}
             {!fs && <MainMenu enableOverlay />}
 
-            <Wrapper className="content-wrapper">
+            <Wrapper
+              className="content-wrapper"
+              style={
+                fs
+                  ? {
+                      '--aside-width': 0, // ensure the sidebar has not left over margin during fullscreen (SSR issue)
+                    }
+                  : {}
+              }
+            >
               {!fs && !hideSidebar && (
                 <Sidebar location={location} showAll={false} />
               )}

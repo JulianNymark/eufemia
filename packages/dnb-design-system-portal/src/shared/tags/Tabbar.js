@@ -21,7 +21,9 @@ export default function Tabbar({
   children,
 }) {
   const [wasFullscreen, setFullscreen] = React.useState(
-    /fullscreen/.test(location.search)
+    /fullscreen/.test(location.search) ||
+      (typeof window !== 'undefined' &&
+        /fullscreen/.test(window.location.search))
   )
 
   const openFullscreen = () => {
