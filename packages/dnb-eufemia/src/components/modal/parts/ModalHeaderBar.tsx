@@ -21,6 +21,8 @@ export interface ModalHeaderBarProps extends SectionProps {
    * Give the inner content wrapper a class name (maps to `dnb-modal__content__inner`).
    */
   className?: string
+
+  shadow_class?: string
 }
 
 interface ModalHeaderBarState {
@@ -75,6 +77,7 @@ export default class ModalHeaderBar extends React.PureComponent<
       className = null,
       children = null,
       ref, //eslint-disable-line
+      shadow_class = null,
       ...props
     } = this.props
     const { showShadow } = this.state
@@ -84,6 +87,7 @@ export default class ModalHeaderBar extends React.PureComponent<
       close_button_attributes,
       onCloseClickHandler,
       close_title,
+      mode,
     } = this.context
 
     if (!title && isTrue(hide_close_button) && !this._ref.current) {
@@ -95,8 +99,19 @@ export default class ModalHeaderBar extends React.PureComponent<
         style_type="white"
         className={classnames(
           'dnb-modal__header__bar',
-          showShadow && 'dnb-modal__header__bar--sticky',
-          className
+          showShadow && shadow_class,
+          className,
+
+          // Deprecated - for backward compatibility
+          mode == 'drawer' && 'dnb-drawer__navigation',
+          (mode == 'modal' || mode == 'dialog') &&
+            'dnb-dialog__navigation',
+          mode == 'drawer' &&
+            showShadow &&
+            'dnb-drawer__navigation--sticky',
+          (mode == 'modal' || mode == 'dialog') &&
+            showShadow &&
+            'dnb-dialog__navigation--sticky'
         )}
         inner_ref={this._ref}
         {...props}

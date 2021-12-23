@@ -1,0 +1,14 @@
+/*
+* DNB Drawer
+*
+*/
+
+@import '../../../style/components/imports.scss';
+
+// import dependencies
+
+.dnb-dialog {
+  @include componentReset();
+}
+
+@import './_dialog.scss';

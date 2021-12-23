@@ -1,0 +1,97 @@
+/**
+ * Web Drawer Component
+ *
+ */
+
+import React, { useContext } from 'react'
+import classnames from 'classnames'
+import {
+  isTrue,
+  findElementInChildren,
+} from '../../shared/component-helper'
+import ScrollView from '../../fragments/scroll-view/ScrollView'
+import DrawerHeader from './parts/DrawerHeader'
+import DrawerNavigation from './parts/DrawerNavigation'
+import ModalContext from '../modal/ModalContext'
+import Modal from '../modal/Modal'
+import { DrawerContentProps } from './types'
+import { checkMinMaxWidth } from './helpers'
+
+export default function DrawerContent({
+  modalContent = null,
+  navContent = null,
+  headerContent = null,
+  alignContent = 'left',
+  containerPlacement = 'right',
+  preventCoreStyle = false,
+  className = null,
+  class: _className = null,
+  spacing = true,
+  fullscreen = 'auto',
+  noAnimation = false,
+  noAnimationOnMobile = false,
+  minWidth: min_width = null,
+  maxWidth: max_width = null,
+  ...rest
+}: DrawerContentProps): JSX.Element {
+  const context = useContext(ModalContext)
+  const { minWidth, maxWidth } = checkMinMaxWidth(min_width, max_width)
+
+  const innerParams = {
+    className: classnames(
+      !isTrue(preventCoreStyle) && 'dnb-core-style',
+
+      'dnb-drawer',
+      isTrue(spacing) && 'dnb-drawer--spacing',
+      alignContent && `dnb-drawer__align--${alignContent}`,
+      isTrue(fullscreen)
+        ? `dnb-drawer--fullscreen`
+        : fullscreen === 'auto' && `dnb-drawer--auto-fullscreen`,
+      isTrue(context?.hide) && `dnb-drawer--hide`,
+      isTrue(noAnimation) && `dnb-drawer--no-animation`,
+      isTrue(noAnimationOnMobile) && `dnb-drawer--no-animation-on-mobile`,
+
+      `dnb-drawer--${containerPlacement || 'right'}`,
+      className,
+      _className
+    ),
+    style: (minWidth || maxWidth) && { minWidth, maxWidth },
+    onClick: context?.preventClick,
+    onTouchStart: context?.preventClick,
+    onKeyDown: context?.onKeyDownHandler,
+    ...rest,
+  }
+
+  const navExists = findElementInChildren(
+    modalContent,
+    (cur) => cur.type === DrawerNavigation || cur.type === Modal.Bar
+  )
+
+  const headerExists = findElementInChildren(
+    modalContent,
+    (cur) => cur.type === DrawerHeader || cur.type === Modal.Header
+  )
+
+  return (
+    <ScrollView {...innerParams}>
+      <div
+        tabIndex={-1}
+        className="dnb-drawer__inner dnb-no-focus"
+        ref={context?.contentRef}
+      >
+        {!navExists && <DrawerNavigation>{navContent}</DrawerNavigation>}
+        {!headerExists && (
+          <DrawerHeader title={context?.title}>
+            {headerContent}
+          </DrawerHeader>
+        )}
+        <div
+          id={context?.contentId + '-content'}
+          className="dnb-drawer__content"
+        >
+          {modalContent}
+        </div>
+      </div>
+    </ScrollView>
+  )
+}
