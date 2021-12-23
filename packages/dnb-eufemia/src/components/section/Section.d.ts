@@ -34,10 +34,7 @@ export type SectionChildren =
   | ((...args: any[]) => any)
   | React.ReactNode;
 
-/**
- * NB: Do not change the docs (comments) in here. The docs are updated during build time by "generateTypes.js" and "fetchPropertiesFromDocs.js".
- */
-export interface SectionProps extends React.HTMLProps<HTMLElement> {
+export interface SectionProps {
   /**
    * To define the style of the visual helper. Use and `Style ID` from below. Defaults to `mint-green-12`.
    */

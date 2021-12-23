@@ -5,8 +5,7 @@ showTabs: true
 import {
 ModalExampleDrawerHeader,
 ModalExampleDrawerBasic,
-ModalExampleCloseByCallback,
-DrawerRealLifeExample,
+ModalExampleCloseByCallback
 } from 'Docs/uilib/components/modal/drawer/Examples'
 
 ## Demos
@@ -14,10 +13,6 @@ DrawerRealLifeExample,
 ### Basic drawer
 
 <ModalExampleDrawerBasic />
-
-### Drawer with custom content
-
-<DrawerRealLifeExample />
 
 ### Drawer with navigation
 

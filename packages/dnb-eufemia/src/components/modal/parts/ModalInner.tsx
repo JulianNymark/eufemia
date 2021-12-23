@@ -4,9 +4,9 @@
  */
 
 import React from 'react'
-import classnames from 'classnames'
 import Section from '../../section/Section'
 import ModalContext from '../ModalContext'
+import classnames from 'classnames'
 import { SectionProps } from '../../Section'
 
 export interface ModalInnerProps extends SectionProps {
@@ -33,11 +33,18 @@ export default class ModalInner extends React.PureComponent<ModalInnerProps> {
       ref, // eslint-disable-line
       ...props
     } = this.props
+    const { mode } = this.context
 
     return (
       <Section
         style_type={style_type}
-        className={classnames('dnb-modal__wrapper__inner', className)}
+        className={classnames(
+          className,
+
+          // Deprecated - for backward compatibility
+          mode == 'drawer' && 'dnb-drawer__body',
+          (mode == 'modal' || mode == 'dialog') && 'dnb-dialog__body'
+        )}
         {...props}
       />
     )

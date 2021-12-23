@@ -38,7 +38,7 @@ describe('Modal screenshot', () => {
       simulate: 'click',
       simulateSelector:
         '[data-visual-test="modal-trigger-default"] button:first-of-type',
-      screenshotSelector: '.dnb-modal__content__inner',
+      screenshotSelector: '.dnb-dialog',
     })
     expect(screenshot).toMatchImageSnapshot()
   })
@@ -113,7 +113,7 @@ describe('Additional Modal screenshot', () => {
       simulate: 'click',
       simulateSelector:
         '[data-visual-test="modal-no-spacing"] button:first-of-type',
-      screenshotSelector: '.dnb-modal__content .dnb-modal__content__inner',
+      screenshotSelector: '.dnb-modal__content .dnb-dialog',
     })
     expect(screenshot).toMatchImageSnapshot()
   })

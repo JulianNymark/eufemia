@@ -115,22 +115,3 @@ export const ModalExampleCloseByCallback = () => (
 	`}
   </ComponentBox>
 )
-
-export const DrawerRealLifeExample = () => (
-  <ComponentBox>
-    {() => /* jsx */ `
-<Modal mode="drawer" title="Velg hvilke kontoer du vil se på forsiden" trigger_text="Open Drawer">
-  <Modal.Header>
-    <P>Disse endringene er globale og vil gjelde for appen vår også.</P>
-  </Modal.Header>
-  <Modal.Content>
-    <P>Elementum eu suspendisse sit platea elit porttitor
-      magna laoreet ad ultrices tempus urna curae parturient
-      conubia quisque viverra eget vestibulum neque pulvinar
-      semper vulputate id dis varius pellentesque nunc
-    </P>
-  </Modal.Content>
-</Modal>
-	`}
-  </ComponentBox>
-)

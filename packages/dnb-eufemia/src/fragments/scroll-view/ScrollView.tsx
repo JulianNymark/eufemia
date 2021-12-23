@@ -14,11 +14,11 @@ import Context from '../../shared/Context'
 import { createSpacingClasses } from '../../components/space/SpacingHelper'
 import { ISpacingProps } from '../../shared/interfaces'
 
-interface ScrollViewProps extends ISpacingProps {
-  className: string
-  children: string | React.ReactNode | ((...args: any[]) => any)
-  innerRef: any
-  class: string
+export interface ScrollViewProps extends ISpacingProps {
+  className?: string
+  children?: string | React.ReactNode | ((...args: any[]) => any)
+  innerRef?: any
+  class?: string
   // All other props
   [x: string]: any
 }

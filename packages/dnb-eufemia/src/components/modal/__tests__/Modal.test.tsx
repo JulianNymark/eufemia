@@ -188,7 +188,7 @@ describe('Modal component', () => {
     })
     expect(testTriggeredBy).toBe(null)
 
-    Comp.find('div.dnb-modal__content__inner').simulate('keyDown', {
+    Comp.find('div.dnb-dialog').simulate('keyDown', {
       key: 'Esc',
       keyCode: 27,
     })
@@ -242,12 +242,10 @@ describe('Modal component', () => {
 
     // and check the class of that element
     expect(
-      document.activeElement.classList.contains(
-        'dnb-modal__content__spacing'
-      )
+      document.activeElement.classList.contains('dnb-dialog__inner')
     ).toBe(true)
 
-    Comp.find('div.dnb-modal__content__inner').simulate('keyDown', {
+    Comp.find('div.dnb-dialog').simulate('keyDown', {
       key: 'Esc',
       keyCode: 27,
     })
@@ -315,7 +313,7 @@ describe('Modal component', () => {
     Comp.find('button').simulate('click')
 
     const elements = document.querySelectorAll(
-      '.dnb-modal__content__wrapper > .dnb-section'
+      '.dnb-dialog__content > .dnb-section'
     )
 
     expect(elements[0].textContent).toContain('bar content')
@@ -590,7 +588,7 @@ describe('Modal component', () => {
     Comp.find('button').simulate('click')
     expect(on_open).toHaveBeenCalledTimes(1)
 
-    Comp.find('div.dnb-modal__content__inner').simulate('keyDown', {
+    Comp.find('div.dnb-dialog').simulate('keyDown', {
       key: 'Esc',
       keyCode: 27,
     })
@@ -613,7 +611,7 @@ describe('Modal component', () => {
     expect(on_close_prevent.mock.calls[2][0].triggeredBy).toBe('button')
 
     // trigger the esc key
-    Comp.find('div.dnb-modal__content__inner').simulate('keyDown', {
+    Comp.find('div.dnb-dialog').simulate('keyDown', {
       key: 'Esc',
       keyCode: 27,
     })
@@ -1007,12 +1005,12 @@ describe('Modal component', () => {
     Comp.find('button').simulate('click')
     expect(on_open).toHaveBeenCalledTimes(1)
     expect(on_close).toHaveBeenCalledTimes(0)
-    expect(Comp.exists('div.dnb-modal__content__inner')).toBe(true)
+    expect(Comp.exists('div.dnb-dialog')).toBe(true)
 
     Comp.find('button.close-button').simulate('click')
     expect(on_open).toHaveBeenCalledTimes(1)
     expect(on_close).toHaveBeenCalledTimes(1)
-    expect(Comp.exists('div.dnb-modal__content__inner')).toBe(false)
+    expect(Comp.exists('div.dnb-dialog')).toBe(false)
   })
 
   it('has to have the correct aria-describedby', () => {
@@ -1097,12 +1095,10 @@ describe('Modal component', () => {
         .getAttribute('aria-describedby')
     ).toBe('dnb-modal-modal_id-content')
     expect(
-      document.querySelector('.dnb-modal__header').getAttribute('id')
+      document.querySelector('.dnb-dialog__header').getAttribute('id')
     ).toBe('dnb-modal-modal_id-title')
     expect(
-      document
-        .querySelector('.dnb-modal__content__wrapper')
-        .getAttribute('id')
+      document.querySelector('.dnb-dialog__content').getAttribute('id')
     ).toBe('dnb-modal-modal_id-content')
   })
 
