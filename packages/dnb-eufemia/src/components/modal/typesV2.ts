@@ -94,11 +94,11 @@ export interface ModalTypesV2 {
   onClose?: ({
     id,
     event,
-    triggered_by,
+    triggeredBy,
   }: {
     id?: string
     event?: Event
-    triggered_by?: string
+    triggeredBy?: string
   }) => void
 
   /**
@@ -107,12 +107,12 @@ export interface ModalTypesV2 {
   onClosePrevent?: ({
     id,
     event,
-    triggered_by,
+    triggeredBy,
     close,
   }: {
     id?: string
     event?: Event
-    triggered_by?: string
+    triggeredBy?: string
     close?: (...args: any[]) => void
   }) => void
 

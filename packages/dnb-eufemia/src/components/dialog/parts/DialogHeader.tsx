@@ -5,14 +5,15 @@ import ModalHeader, {
 } from '../../modal/parts/ModalHeader'
 
 export default function DialogHeader({
-  className = null,
+  className,
+  titleClass,
   ...props
 }: ModalHeaderProps) {
   return (
     <ModalHeader
       {...props}
       className={classnames('dnb-dialog__header', className)}
-      title_class="dnb-dialog__title"
+      title_class={classnames('dnb-dialog__title', titleClass)}
     />
   )
 }

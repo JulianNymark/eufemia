@@ -1,5 +1,5 @@
 ---
-showTabs: true
+draft: true
 ---
 
 import {

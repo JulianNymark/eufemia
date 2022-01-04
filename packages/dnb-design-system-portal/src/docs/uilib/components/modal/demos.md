@@ -11,9 +11,18 @@ ModalExampleCustomTrigger,
 ModalExampleStateOnly,
 ModalExampleCloseByHandler,
 ModalExampleProgressIndicator,
+ModalExampleModeCustom
 } from 'Docs/uilib/components/modal/Examples'
 
 ## Demos
+
+### Mode custom
+
+<ModalExampleModeCustom />
+
+See Dialog and Drawer demos for more examples.
+
+## Modal V1 Demos
 
 ### Triggered by the help button
 

@@ -26,12 +26,12 @@ function Drawer({
   title,
   dialogTitle,
   closeTitle,
-  containerPlacement,
+  containerPlacement = 'right',
   spacing,
   noAnimation,
   noAnimationOnMobile,
   animationDuration,
-  fullscreen,
+  fullscreen = 'auto',
 
   onOpen,
   onClose,
@@ -53,6 +53,7 @@ function Drawer({
 
   return (
     <Modal
+      {...context.Drawer}
       mode="custom"
       content_class={classnames('dnb-drawer__root', contentClass)}
       title={title}
@@ -84,15 +85,14 @@ function Drawer({
       trigger={trigger}
       trigger_attributes={triggerAttributes}
       overlay_class={overlayClass}
-      {...context.Drawer} // can we do this?
     >
       <DrawerContent
+        {...context.Drawer}
+        {...props}
         noAnimation={noAnimation}
         noAnimationOnMobile={noAnimationOnMobile}
         fullscreen={fullscreen}
         spacing={spacing}
-        {...props}
-        {...context.Drawer}
       />
     </Modal>
   )

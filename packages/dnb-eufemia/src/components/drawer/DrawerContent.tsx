@@ -36,6 +36,13 @@ export default function DrawerContent({
 }: DrawerContentProps): JSX.Element {
   const context = useContext(ModalContext)
   const { minWidth, maxWidth } = checkMinMaxWidth(min_width, max_width)
+  const content =
+    modalContent ||
+    Modal.getContent(
+      typeof rest.children === 'function'
+        ? Object.freeze({ ...rest, close: context?.close })
+        : rest
+    )
 
   const innerParams = {
     className: classnames(
@@ -63,12 +70,12 @@ export default function DrawerContent({
   }
 
   const navExists = findElementInChildren(
-    modalContent,
+    content,
     (cur) => cur.type === DrawerNavigation || cur.type === Modal.Bar
   )
 
   const headerExists = findElementInChildren(
-    modalContent,
+    content,
     (cur) => cur.type === DrawerHeader || cur.type === Modal.Header
   )
 
@@ -89,7 +96,7 @@ export default function DrawerContent({
           id={context?.contentId + '-content'}
           className="dnb-drawer__content"
         >
-          {modalContent}
+          {content}
         </div>
       </div>
     </ScrollView>

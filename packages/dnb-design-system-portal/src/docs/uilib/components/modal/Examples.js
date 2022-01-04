@@ -169,3 +169,18 @@ export const ModalExampleProgressIndicator = () => (
 	`}
   </ComponentBox>
 )
+
+export const ModalExampleModeCustom = () => (
+  <ComponentBox>
+    {() => /* jsx */ `
+<Modal mode="custom">
+  <div style={{ padding: '2rem', backgroundColor: 'white' }}>
+    <H1>A custom component</H1>
+    <P>
+      This is a Modal mode that you can use to make custom variations
+    </P>
+  </div>
+</Modal>
+	`}
+  </ComponentBox>
+)
