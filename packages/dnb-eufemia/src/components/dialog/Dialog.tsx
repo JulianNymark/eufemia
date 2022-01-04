@@ -26,11 +26,11 @@ function Dialog({
   title,
   dialogTitle,
   closeTitle,
-  spacing,
+  spacing = true,
   noAnimation,
   noAnimationOnMobile,
   animationDuration,
-  fullscreen,
+  fullscreen = 'auto',
 
   onOpen,
   onClose,
@@ -49,10 +49,11 @@ function Dialog({
   ...props
 }: DialogProps & DialogContentProps): JSX.Element {
   const context = useContext(Context)
+  const modalContent = Modal.getContent(props)
 
   return (
     <Modal
-      {...context.Dialog} // can we do this?
+      {...context.Dialog}
       mode="custom"
       content_class={classnames('dnb-dialog__root', contentClass)}
       title={title}
@@ -86,11 +87,12 @@ function Dialog({
     >
       <DialogContent
         {...context.Dialog}
+        {...props}
         noAnimation={noAnimation}
         noAnimationOnMobile={noAnimationOnMobile}
         fullscreen={fullscreen}
         spacing={spacing}
-        {...props}
+        modalContent={modalContent}
       />
     </Modal>
   )

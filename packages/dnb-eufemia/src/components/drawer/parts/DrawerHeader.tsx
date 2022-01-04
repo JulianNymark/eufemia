@@ -5,14 +5,15 @@ import ModalHeader, {
 } from '../../modal/parts/ModalHeader'
 
 export default function DrawerHeader({
-  className = null,
+  className,
+  titleClass,
   ...props
 }: ModalHeaderProps) {
   return (
     <ModalHeader
       {...props}
       className={classnames('dnb-drawer__header', className)}
-      title_class="dnb-drawer__title"
+      title_class={classnames('dnb-drawer__title', titleClass)}
     />
   )
 }

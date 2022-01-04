@@ -19,6 +19,7 @@ const ModalContext = React.createContext({
   contentRef: null,
   hide: null,
   contentId: null,
+  close: null,
 })
 
 export default ModalContext

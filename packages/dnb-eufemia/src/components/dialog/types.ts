@@ -11,6 +11,11 @@ export interface DialogProps extends ModalTypesV2 {
    * The dialog title. Displays on the very top of the content.
    */
   title?: React.ReactNode
+
+  /**
+   * Variant of Dialog (coming)
+   */
+  // variant: 'inform' | 'confirm'
 }
 
 export interface DialogContentProps extends ScrollViewProps {
@@ -75,12 +80,7 @@ export interface DialogContentProps extends ScrollViewProps {
   noAnimation?: string | boolean
 
   /**
-   * Same as `no_animation`, but gets triggered only if the viewport width is less than `40em`. Defaults to false.
+   * Same as `noAnimation`, but gets triggered only if the viewport width is less than `40em`. Defaults to false.
    */
   noAnimationOnMobile?: string | boolean
-
-  /**
-   * Variant of Dialog (coming)s
-   */
-  // variant: 'inform' | 'confirm'
 }

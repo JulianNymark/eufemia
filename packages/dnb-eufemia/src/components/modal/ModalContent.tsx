@@ -430,6 +430,9 @@ export default class ModalContent extends React.PureComponent<
       noAnimationOnMobile: no_animation_on_mobile,
       fullscreen,
       containerPlacement: container_placement,
+      rootId: rest.root_id,
+      focusSelector: rest.focus_selector,
+
       ...rest,
     }
 
@@ -449,6 +452,7 @@ export default class ModalContent extends React.PureComponent<
           onKeyDownHandler: this.onKeyDownHandler,
           contentRef: this._contentRef,
           contentId,
+          close: closeModal,
         }}
       >
         <div
@@ -461,9 +465,23 @@ export default class ModalContent extends React.PureComponent<
           {...contentParams}
         >
           {/* Deprecated: Only to provide backward compatibility */}
-          {mode == 'drawer' && <DrawerContent {...modeParams} />}
+          {mode == 'drawer' && (
+            <DrawerContent
+              contentClass={classnames(
+                content_class,
+                'dnb-modal__content__inner' // backward compatibility
+              )}
+              {...modeParams}
+            />
+          )}
           {(mode == 'modal' || mode == 'dialog') && (
-            <DialogContent {...modeParams} />
+            <DialogContent
+              contentClass={classnames(
+                content_class,
+                'dnb-modal__content__inner' // backward compatibility
+              )}
+              {...modeParams}
+            />
           )}
 
           {/* New method of using Modal */}

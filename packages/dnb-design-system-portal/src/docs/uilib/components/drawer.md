@@ -2,9 +2,12 @@
 title: 'Drawer'
 description: 'The Drawer component is a part of (mode) the Modal component because they have many similarities.'
 # showTabs: true
-draft: true
+status: 'new'
+showTabs: true
 ---
 
-# Drawer
+import DrawerInfo from 'Docs/uilib/components/drawer/info'
+import DrawerDemos from 'Docs/uilib/components/drawer/demos'
 
-The Drawer component is a part of (mode) the [Modal component](/uilib/components/modal) because they have many similarities.
+<DrawerInfo />
+<DrawerDemos />

@@ -72,11 +72,11 @@ export interface ModalProps extends ModalRootProps {
   on_close?: ({
     id,
     event,
-    triggered_by,
+    triggeredBy,
   }: {
     id?: string
     event?: Event
-    triggered_by?: string
+    triggeredBy?: string
   }) => void
 
   /**
@@ -85,12 +85,12 @@ export interface ModalProps extends ModalRootProps {
   on_close_prevent?: ({
     id,
     event,
-    triggered_by,
+    triggeredBy,
     close,
   }: {
     id?: string
     event?: Event
-    triggered_by?: string
+    triggeredBy?: string
     close?: (...args: any[]) => any
   }) => void
 
@@ -317,13 +317,16 @@ export interface ModalContentProps {
    * The displayed text for the 'close' button. Defaults to `Lukk`.
    */
   close_title?: string
+
+  // Other props
+  [x: string]: any
 }
 
 export type TriggerAttributes = {
   /**
    * If truthy, no trigger button will be show. This can be used in combination with `open_state="opened"`.
    */
-  hidden: string | boolean
+  hidden?: string | boolean
 
   /**
    * If truthy, then the trigger button can&#39;t be opened.

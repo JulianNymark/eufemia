@@ -18,9 +18,9 @@ import { checkMinMaxWidth } from '../drawer/helpers'
 import { DialogContentProps } from './types'
 
 export default function DialogContent({
+  modalContent = null,
   navContent = null,
   headerContent = null,
-  modalContent = null,
   alignContent = 'left',
   className = null,
   class: _className = null,
@@ -35,6 +35,13 @@ export default function DialogContent({
 }: DialogContentProps): JSX.Element {
   const context = useContext(ModalContext)
   const { minWidth, maxWidth } = checkMinMaxWidth(min_width, max_width)
+  const content =
+    modalContent ||
+    Modal.getContent(
+      typeof rest.children === 'function'
+        ? Object.freeze({ ...rest, close: context?.close })
+        : rest
+    )
 
   const innerParams = {
     className: classnames(
@@ -60,12 +67,12 @@ export default function DialogContent({
   }
 
   const navExists = findElementInChildren(
-    modalContent,
+    content,
     (cur) => cur.type === DialogNavigation || cur.type === Modal.Bar
   )
 
   const headerExists = findElementInChildren(
-    modalContent,
+    content,
     (cur) => cur.type === DialogHeader || cur.type === Modal.Header
   )
   return (
@@ -85,7 +92,7 @@ export default function DialogContent({
           id={context?.contentId + '-content'}
           className="dnb-dialog__content"
         >
-          {modalContent}
+          {content}
         </div>
       </div>
     </ScrollView>
