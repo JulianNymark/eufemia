@@ -21,6 +21,7 @@ import HelpButtonInstance from '../help-button/HelpButtonInstance'
 import { getListOfModalRoots, getModalRoot } from './helpers'
 import ModalInner from './parts/ModalInner'
 import { ModalProps } from './types'
+import { ModalPropsV2 } from './typesV2'
 import ModalHeader from './parts/ModalHeader'
 import ModalHeaderBar from './parts/ModalHeaderBar'
 import CloseButton from './parts/CloseButton'
@@ -34,16 +35,28 @@ interface ModalState {
   modalActive: boolean
 }
 
-export default class Modal extends React.PureComponent<
-  ModalProps & ISpacingProps,
+class Modal extends React.PureComponent<
+  ModalProps & ModalPropsV2 & ISpacingProps,
   ModalState
 > {
-  static tagName = 'dnb-modal'
   static contextType = Context
+  static tagName = 'dnb-modal'
   static Bar = ModalHeaderBar
   static Header = ModalHeader
   static Content = ModalInner
   static Inner = ModalInner // deprecated
+
+  static getContent(props) {
+    if (typeof props.modal_content === 'string') {
+      return props.modal_content
+    } else if (typeof props.modal_content === 'function') {
+      return props.modal_content(props)
+    }
+    return processChildren(props)
+  }
+  static enableWebComponent() {
+    registerElement(Modal?.tagName, Modal, Modal.defaultProps)
+  }
 
   _id: string
   _triggerRef: React.RefObject<any>
@@ -116,19 +129,6 @@ export default class Modal extends React.PureComponent<
     modal_content: null,
     header_content: null,
     bar_content: null,
-  }
-
-  static enableWebComponent() {
-    registerElement(Modal?.tagName, Modal, Modal.defaultProps)
-  }
-
-  static getContent(props) {
-    if (typeof props.modal_content === 'string') {
-      return props.modal_content
-    } else if (typeof props.modal_content === 'function') {
-      return props.modal_content(props)
-    }
-    return processChildren(props)
   }
 
   static getDerivedStateFromProps(props, state) {
@@ -520,3 +520,35 @@ export default class Modal extends React.PureComponent<
 }
 
 export { CloseButton }
+
+/* class EnhancedModal extends React.PureComponent<
+  ModalProps & ModalPropsV2 & ISpacingProps,
+  ModalState
+> {
+  static contextType = Context
+  static tagName = 'dnb-modal'
+  static Bar = ModalHeaderBar
+  static Header = ModalHeader
+  static Content = ModalInner
+  static Inner = ModalInner // deprecated
+
+  static getContent(props) {
+    if (typeof props.modal_content === 'string') {
+      return props.modal_content
+    } else if (typeof props.modal_content === 'function') {
+      return props.modal_content(props)
+    }
+    return processChildren(props)
+  }
+  static enableWebComponent() {
+    registerElement(Modal?.tagName, Modal, Modal.defaultProps)
+  }
+
+  render() {
+    const newProps = convertCamelCaseProps(this.props)
+
+    return <Modal {...newProps}>{this.props.children}</Modal>
+  }
+}
+ */
+export default Modal

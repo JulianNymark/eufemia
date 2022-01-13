@@ -2,7 +2,7 @@ import { CloseButtonProps } from './parts/CloseButton'
 import { TriggerAttributes } from './types'
 import Modal from './Modal'
 
-export interface ModalTypesV2 {
+export interface ModalPropsV2 {
   /**
    * The id used internal for the trigger button and Modal component.
    */
@@ -19,7 +19,7 @@ export interface ModalTypesV2 {
   contentId?: string
 
   /**
-   * The Modal handles the first focus – automatically. How ever, you can defined a custom focus selector the will be used instead `focus_selector=".css-selector"`.
+   * The Modal handles the first focus – automatically. How ever, you can defined a custom focus selector the will be used instead `focusSelector=".css-selector"`.
    */
   focusSelector?: string
 

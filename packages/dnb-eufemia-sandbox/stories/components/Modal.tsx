@@ -238,6 +238,16 @@ export const ModalSandbox = () => (
   </Wrapper>
 )
 
+export const ModalV2Sandbox = () => (
+  <Modal
+    openState={true}
+    title="hellooo"
+    triggerAttributes={{ text: 'Custom' }}
+  >
+    The informational content
+  </Modal>
+)
+
 export const DrawerSandbox = () => (
   <Wrapper>
     <Global
@@ -435,6 +445,7 @@ class ModalRerenderExample extends React.PureComponent {
     title: 'Modal Title',
     trigger_text: 'Open Modal',
   }
+  timeout
 
   componentDidMount() {
     this.timeout = setTimeout(() => {
@@ -624,7 +635,7 @@ const ModalTriggerExample = () => {
         <Button
           id="custom-triggerer"
           text="Custom trigger Button"
-          on_click={(e) => {
+          on_click={() => {
             // console.log('on_click', e)
             return (
               <Modal
@@ -884,7 +895,7 @@ export const ModalPerformance = () => (
       <caption>A Table Caption</caption>
       <thead>
         <tr>
-          <th scope="col" colSpan="2" className="dnb-table--no-wrap">
+          <th scope="col" colSpan={2} className="dnb-table--no-wrap">
             Header
           </th>
           <th
@@ -930,14 +941,14 @@ export const ModalPerformance = () => (
           <td align="right">Column 4</td>
         </tr>
         <tr>
-          <td colSpan="2">Column which spans over two columns</td>
+          <td colSpan={2}>Column which spans over two columns</td>
           <td>Column 3</td>
           <td align="right">
             Column 4 <Button text="Focus me" />
             const template ={' '}
           </td>
         </tr>
-        <LargeListOfTrs />
+        {LargeListOfTrs}
       </tbody>
     </Table>
   </div>

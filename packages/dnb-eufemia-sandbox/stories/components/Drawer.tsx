@@ -18,6 +18,7 @@ import {
   NumberFormat,
   Drawer,
 } from '@dnb/eufemia/src'
+import { Provider } from '@dnb/eufemia/src/shared'
 
 import { H1, H2, P, Hr } from '@dnb/eufemia/src/elements'
 
@@ -355,6 +356,25 @@ function FillContent() {
   )
 }
 
+export const DrawerContentParts = () => (
+  <Drawer
+    title="Custom title"
+    id="drawer-parts"
+    noAnimation
+    directDomReturn={false}
+  >
+    <Drawer.Navigation>
+      <button id="content-nav">navigation</button>
+    </Drawer.Navigation>
+    <Drawer.Header>
+      <button id="content-header">header</button>
+    </Drawer.Header>
+    <Drawer.Body>
+      <button id="content-body">body</button>
+    </Drawer.Body>
+  </Drawer>
+)
+
 let dropdownData = [
   {
     selected_value: 'Brukskonto - Kari Nordmann',
@@ -432,6 +452,16 @@ function CloseByCallback() {
   )
 }
 
+export const DrawerContext = () => (
+  <Provider
+    value={{
+      Drawer: { title: 'Title' },
+    }}
+  >
+    <Drawer title="Use this!" />
+  </Provider>
+)
+
 export const DrawerPerformance = () => (
   <div>
     <Drawer triggerAttributes={{ text: 'Open Drawer' }} bottom>
@@ -490,7 +520,7 @@ export const DrawerPerformance = () => (
           <td align="right">Column 4</td>
         </tr>
         <tr>
-          <td colSpan="2">Column which spans over two columns</td>
+          <td colSpan={2}>Column which spans over two columns</td>
           <td>Column 3</td>
           <td align="right">
             Column 4 <Button text="Focus me" />

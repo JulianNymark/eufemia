@@ -32,6 +32,11 @@ export interface ModalHeaderProps extends SectionProps {
    * Give the h1 component a classname (maps to `dnb-modal__title`)
    */
   title_class?: string
+
+  /**
+   * Font size of the title (maps to `dnb-p--<size>`)
+   */
+  size?: 'medium' | 'large' | 'x-large' | 'xx-large'
 }
 
 export default class ModalHeader extends React.PureComponent<ModalHeaderProps> {
@@ -42,6 +47,7 @@ export default class ModalHeader extends React.PureComponent<ModalHeaderProps> {
       className = null,
       children = null,
       title_class = null,
+      size = null,
       ref, // eslint-disable-line
       ...sectionProps
     } = this.props
@@ -53,6 +59,8 @@ export default class ModalHeader extends React.PureComponent<ModalHeaderProps> {
 
     const usedTitle = title || this.context.title
     const showTitle = !customHeader && usedTitle
+    const fontSize =
+      size || (this.context.mode === 'drawer' && 'x-large') || 'large'
 
     return (
       <Section
@@ -75,9 +83,7 @@ export default class ModalHeader extends React.PureComponent<ModalHeaderProps> {
               'dnb-modal__title', // for tests
               'dnb-space__top--zero',
               'dnb-space__bottom--small',
-              this.context.mode === 'drawer'
-                ? 'dnb-h--x-large'
-                : 'dnb-h--large',
+              `dnb-h--${fontSize}`,
               title_class,
 
               // Deprecated - For backward compatibility

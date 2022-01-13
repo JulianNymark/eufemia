@@ -430,9 +430,6 @@ export default class ModalContent extends React.PureComponent<
       noAnimationOnMobile: no_animation_on_mobile,
       fullscreen,
       containerPlacement: container_placement,
-      rootId: rest.root_id,
-      focusSelector: rest.focus_selector,
-
       ...rest,
     }
 
@@ -467,19 +464,13 @@ export default class ModalContent extends React.PureComponent<
           {/* Deprecated: Only to provide backward compatibility */}
           {mode == 'drawer' && (
             <DrawerContent
-              contentClass={classnames(
-                content_class,
-                'dnb-modal__content__inner' // backward compatibility
-              )}
+              className="dnb-modal__content__inner" // backward compatibility
               {...modeParams}
             />
           )}
           {(mode == 'modal' || mode == 'dialog') && (
             <DialogContent
-              contentClass={classnames(
-                content_class,
-                'dnb-modal__content__inner' // backward compatibility
-              )}
+              className="dnb-modal__content__inner" // backward compatibility
               {...modeParams}
             />
           )}

@@ -1,7 +1,7 @@
 import { ScrollViewProps } from '../../fragments/ScrollView'
-import { ModalTypesV2 } from '../modal/typesV2'
+import { ModalPropsV2 } from '../modal/typesV2'
 
-export interface DrawerProps extends ModalTypesV2 {
+export interface DrawerProps extends ModalPropsV2 {
   /**
    * Defines the placement on what side the Drawer should be opened. Can be set to `left`, `right`, `top` and `bottom`. Defaults to `right`.
    */

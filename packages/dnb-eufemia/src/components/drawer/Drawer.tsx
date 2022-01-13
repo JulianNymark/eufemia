@@ -11,6 +11,7 @@ import DrawerNavigation from './parts/DrawerNavigation'
 import classnames from 'classnames'
 import Context from '../../shared/Context'
 import { DrawerProps, DrawerContentProps } from './types'
+import { removeUndefinedProps } from '../../shared/component-helper'
 
 function Drawer({
   id,
@@ -27,7 +28,7 @@ function Drawer({
   dialogTitle,
   closeTitle,
   containerPlacement = 'right',
-  spacing,
+  spacing = true,
   noAnimation,
   noAnimationOnMobile,
   animationDuration,
@@ -47,53 +48,69 @@ function Drawer({
   overlayClass,
   contentClass,
 
+  top,
+  bottom,
+  left,
+  right,
+  space,
+
   ...props
 }: DrawerProps & DrawerContentProps): JSX.Element {
   const context = useContext(Context)
 
+  const modalProps = removeUndefinedProps({
+    title: title,
+    id: id,
+    focus_selector: focusSelector,
+    labelled_by: labelledBy,
+    disabled: disabled,
+    spacing: spacing,
+    open_delay: openDelay,
+    content_id: contentId,
+    dialog_title: dialogTitle,
+    close_title: closeTitle,
+    hide_close_button: hideCloseButton,
+    close_button_attributes: closeButtonAttributes,
+    prevent_close: preventClose,
+    animation_duration: animationDuration,
+    no_animation: noAnimation,
+    no_animation_on_mobile: noAnimationOnMobile,
+    fullscreen: fullscreen,
+    container_placement: containerPlacement,
+    open_state: openState,
+    direct_dom_return: directDomReturn,
+    root_id: rootId,
+    on_open: onOpen,
+    on_close: onClose,
+    on_close_prevent: onClosePrevent,
+    open_modal: openModal,
+    close_modal: closeModal,
+    trigger: trigger,
+    trigger_attributes: triggerAttributes,
+    overlay_class: overlayClass,
+    top: top,
+    bottom: bottom,
+    left: left,
+    right: right,
+    space: space,
+  })
+
+  const drawerProps = removeUndefinedProps({
+    ...props,
+    noAnimation,
+    noAnimationOnMobile,
+    fullscreen,
+    spacing,
+  })
+
   return (
     <Modal
       {...context.Drawer}
+      {...modalProps}
       mode="custom"
       content_class={classnames('dnb-drawer__root', contentClass)}
-      title={title}
-      id={id}
-      focus_selector={focusSelector}
-      labelled_by={labelledBy}
-      disabled={disabled}
-      spacing={spacing}
-      open_delay={openDelay}
-      content_id={contentId}
-      dialog_title={dialogTitle}
-      close_title={closeTitle}
-      hide_close_button={hideCloseButton}
-      close_button_attributes={closeButtonAttributes}
-      prevent_close={preventClose}
-      animation_duration={animationDuration}
-      no_animation={noAnimation}
-      no_animation_on_mobile={noAnimationOnMobile}
-      fullscreen={fullscreen}
-      container_placement={containerPlacement}
-      open_state={openState}
-      direct_dom_return={directDomReturn}
-      root_id={rootId}
-      on_open={onOpen}
-      on_close={onClose}
-      on_close_prevent={onClosePrevent}
-      open_modal={openModal}
-      close_modal={closeModal}
-      trigger={trigger}
-      trigger_attributes={triggerAttributes}
-      overlay_class={overlayClass}
     >
-      <DrawerContent
-        {...context.Drawer}
-        {...props}
-        noAnimation={noAnimation}
-        noAnimationOnMobile={noAnimationOnMobile}
-        fullscreen={fullscreen}
-        spacing={spacing}
-      />
+      <DrawerContent {...context.Drawer} {...drawerProps} />
     </Modal>
   )
 }
