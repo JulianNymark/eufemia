@@ -8,7 +8,6 @@
   --modal-animation-duration: 300ms;
   --modal-spacing: 2rem; // should reflect --spacing-large
   --modal-spacing-minus: -2rem; // should reflect --spacing-large
-
   --drawer-width: 40vw;
   --drawer-min-width: 25rem;
   --drawer-max-width: 40rem;
@@ -47,7 +46,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    position: relative;
     z-index: 10;
     background-color: var(--modal-background-color, transparent);
 

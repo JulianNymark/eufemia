@@ -23,7 +23,9 @@ export interface ScrollViewProps extends ISpacingProps {
   [x: string]: any
 }
 
-class ScrollView extends React.PureComponent<ScrollViewProps> {
+class ScrollView extends React.PureComponent<
+  ScrollViewProps & React.ComponentPropsWithoutRef<'div'>
+> {
   static tagName = 'dnb-scroll-view'
   static contextType = Context
   ref: any

@@ -7,11 +7,13 @@ import ModalHeader, {
 export default function DialogHeader({
   className,
   titleClass,
+  size = 'large',
   ...props
 }: ModalHeaderProps) {
   return (
     <ModalHeader
       {...props}
+      size={size}
       className={classnames('dnb-dialog__header', className)}
       title_class={classnames('dnb-dialog__title', titleClass)}
     />

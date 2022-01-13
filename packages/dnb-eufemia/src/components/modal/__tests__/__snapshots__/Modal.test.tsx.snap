@@ -1048,6 +1048,7 @@ exports[`Modal component have to match snapshot 1`] = `
                   >
                     <ModalHeader
                       className="dnb-dialog__header"
+                      size="large"
                       title="modal_title"
                       title_class="dnb-dialog__title"
                     >
@@ -1697,7 +1698,6 @@ button.dnb-button::-moz-focus-inner {
     position: relative;
     display: flex;
     flex-direction: column;
-    position: relative;
     z-index: 10;
     background-color: var(--modal-background-color, transparent);
     width: 100%;

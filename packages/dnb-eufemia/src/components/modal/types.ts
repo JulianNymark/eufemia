@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { CloseButtonProps } from './parts/CloseButton'
 import { ModalRootProps } from './ModalRoot'
-import { Modal } from '..'
 
 export type ExtendedBoolean = string | boolean
 export type ReactChildType = React.ReactNode | ((...args: any[]) => any)
@@ -97,17 +96,14 @@ export interface ModalProps extends ModalRootProps {
   /**
    * Set a function to call the callback function, once the modal/drawer should open: `open_modal={(open) => open()}`
    */
-  open_modal?: (
-    open?: (e: Event) => void,
-    elem?: Modal
-  ) => () => void | void
+  open_modal?: (open?: (e: Event) => void, elem?: any) => () => void | void
 
   /**
    * Set a function to call the callback function, once the modal/drawer should close: `close_modal={(close) => close()}`
    */
   close_modal?: (
     close?: (...args: any[]) => void,
-    elem?: Modal
+    elem?: any
   ) => () => void | void
 
   /**

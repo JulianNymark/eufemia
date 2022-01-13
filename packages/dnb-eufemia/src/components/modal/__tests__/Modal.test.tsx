@@ -1126,6 +1126,19 @@ describe('Modal component', () => {
     expect(Comp2.find('.dnb-icon').exists()).toBe(true)
   })
 
+  /* it('should render camelcase props', () => {
+    const customText = 'Custom title in camelcase'
+     const Comp = mount(
+      <Component
+        triggerAttributes={{ text: customText }}
+        open_state={true}
+      >
+        The informational content
+      </Component>
+    ) 
+    expect(Comp.find('h1').text()).toBe(customText)
+  })*/
+
   it('should validate with ARIA rules as a dialog', async () => {
     const Comp = mount(<Component {...props} />)
     Comp.setState({

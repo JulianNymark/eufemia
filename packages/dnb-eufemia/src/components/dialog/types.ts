@@ -1,12 +1,7 @@
 import { ScrollViewProps } from '../../fragments/ScrollView'
-import { ModalTypesV2 } from '../modal/typesV2'
+import { ModalPropsV2 } from '../modal/typesV2'
 
-export interface DialogProps extends ModalTypesV2 {
-  /**
-   * Defines the placement on what side the Dialog should be opened. Can be set to `left`, `right`, `top` and `bottom`. Defaults to `right`.
-   */
-  containerPlacement?: string
-
+export interface DialogProps extends ModalPropsV2 {
   /**
    * The dialog title. Displays on the very top of the content.
    */
