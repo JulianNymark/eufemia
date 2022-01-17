@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge scss have to match default theme snapshot 1`] = `
+"/*
+* Badge theme
+*
+*/
+/**
+ * This file is only used to make themes independent
+ * so that they can get imported individually, without the core styles
+ *
+ */
+/*
+ * Utilities
+ */
+.dnb-badge {
+  color: var(--color-pistachio); }
+  .dnb-badge--primary {
+    background-color: var(--color-sea-green); }
+  .dnb-badge--secondary {
+    background-color: var(--color-emerald-green); }
+  .dnb-badge--tertiary {
+    background-color: var(--color-mint-green);
+    color: var(--color-emerald-green); }
+"
+`;
+
+exports[`Badge scss have to match snapshot 1`] = `
+"/*
+* DNB Badge
+*
+*/
+/**
+ * This file is only used to make components independent
+ * so that they can get imported individually, without the core styles
+ *
+ */
+/*
+ * Utilities
+ */
+/*
+ * Scopes
+ *
+ */
+/*
+ * Document Reset
+ *
+ */
+.dnb-badge {
+  font-family: var(--font-family-default);
+  font-weight: var(--font-weight-basis);
+  font-size: var(--font-size-small);
+  font-style: normal;
+  line-height: var(--line-height-basis);
+  color: var(--color-black-80, #333);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /**
+  * Ensure consistency and use the same as HTML reset -> html {...}
+  * between base and code package
+  */
+  -moz-tab-size: 4;
+  tab-size: 4;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  word-break: break-word;
+  /**
+  * 1. Remove repeating backgrounds in all browsers (opinionated).
+  * 2. Add border box sizing in all browsers (opinionated).
+  */
+  /**
+  * 1. Add text decoration inheritance in all browsers (opinionated).
+  * 2. Add vertical alignment inheritance in all browsers (opinionated).
+  */
+  margin: 0;
+  padding: 0; }
+  .dnb-badge *,
+  .dnb-badge ::before,
+  .dnb-badge ::after {
+    background-repeat: no-repeat;
+    /* 1 */
+    box-sizing: border-box;
+    /* 2 */ }
+  .dnb-badge ::before,
+  .dnb-badge ::after {
+    text-decoration: inherit;
+    /* 1 */
+    vertical-align: inherit;
+    /* 2 */ }
+
+/*
+* Badge component
+*
+*/
+:root {
+  --badge-font-size--small: 0.5rem;
+  --badge-font-size--medium: 0.75rem;
+  --badge-font-size--large: var(--font-size-x-small);
+  --badge-font-size--x-large: var(--font-size-basis);
+  --badge-line-height--small: var(--line-height-xx-small);
+  --badge-line-height--medium: var(--line-height-xx-small);
+  --badge-line-height--large: var(--line-height-x-small);
+  --badge-line-height--x-large: var(--line-height-basis);
+  --badge-width--small: 0.5rem;
+  --badge-height--small: 0.5rem;
+  --badge-border-radius--small: 0.25rem;
+  --badge-width--medium: 0.75rem;
+  --badge-height--medium: 0.75rem;
+  --badge-border-radius--medium: 0.375rem;
+  --badge-width--large: 1.5rem;
+  --badge-height--large: 1.5rem;
+  --badge-border-radius--large: 0.75rem;
+  --badge-width--x-large: 2rem;
+  --badge-height--x-large: 2rem;
+  --badge-border-radius--x-large: 1rem; }
+
+.dnb-badge {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: absolute;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 2; }
+  .dnb-badge__root {
+    position: relative;
+    display: inline-flex;
+    vertical-align: middle;
+    flex-shrink: 0; }
+  .dnb-badge,
+  .dnb-core-style .dnb-badge {
+    line-height: var(--button-height); }
+  .dnb-badge--size-small {
+    width: var(--badge-width--small);
+    height: var(--badge-height--small);
+    border-radius: var(--badge-border-radius--small);
+    font-size: var(--badge-font-size--small); }
+    .dnb-badge--size-small,
+    .dnb-core-style .dnb-badge--size-small {
+      line-height: var(--badge-line-height--small); }
+  .dnb-badge--size-medium {
+    width: var(--badge-width--medium);
+    height: var(--badge-height--medium);
+    border-radius: var(--badge-border-radius--medium);
+    font-size: var(--badge-font-size--medium); }
+    .dnb-badge--size-medium,
+    .dnb-core-style .dnb-badge--size-medium {
+      line-height: var(--badge-line-height--medium); }
+  .dnb-badge--size-large {
+    width: var(--badge-width--large);
+    height: var(--badge-height--large);
+    border-radius: var(--badge-border-radius--large);
+    font-size: var(--badge-font-size--large); }
+    .dnb-badge--size-large,
+    .dnb-core-style .dnb-badge--size-large {
+      line-height: var(--badge-line-height--large); }
+  .dnb-badge--size-x-large {
+    width: var(--badge-width--x-large);
+    height: var(--badge-height--x-large);
+    border-radius: var(--badge-border-radius--x-large);
+    font-size: var(--badge-font-size--x-large); }
+    .dnb-badge--size-x-large,
+    .dnb-core-style .dnb-badge--size-x-large {
+      line-height: var(--badge-line-height--x-large); }
+  .dnb-badge--has-text.dnb-badge--size-small {
+    min-width: var(--badge-width--small);
+    width: auto;
+    padding: 0 1px; }
+  .dnb-badge--has-text.dnb-badge--size-medium {
+    min-width: var(--badge-width--medium);
+    width: auto;
+    padding: 0 2px; }
+  .dnb-badge--has-text.dnb-badge--size-large {
+    min-width: var(--badge-width--large);
+    width: auto;
+    padding: 0 6px; }
+  .dnb-badge--has-text.dnb-badge--size-x-large {
+    min-width: var(--badge-width--x-large);
+    width: auto;
+    padding: 0 6px; }
+  .dnb-badge--horizontal-left {
+    left: 0; }
+  .dnb-badge--horizontal-right {
+    right: 0; }
+  .dnb-badge--vertical-bottom {
+    bottom: 0; }
+  .dnb-badge--vertical-top {
+    top: 0; }
+"
+`;

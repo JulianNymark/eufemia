@@ -1,0 +1,155 @@
+/*
+* Badge component
+*
+*/
+
+:root {
+  --badge-font-size--small: 0.5rem;
+  --badge-font-size--medium: 0.75rem;
+  --badge-font-size--large: var(--font-size-x-small);
+  --badge-font-size--x-large: var(--font-size-basis);
+  --badge-line-height--small: var(--line-height-xx-small);
+  --badge-line-height--medium: var(--line-height-xx-small);
+  --badge-line-height--large: var(--line-height-x-small);
+  --badge-line-height--x-large: var(--line-height-basis);
+  --badge-width--small: 0.5rem;
+  --badge-height--small: 0.5rem;
+  --badge-border-radius--small: 0.25rem;
+  --badge-width--medium: 0.75rem;
+  --badge-height--medium: 0.75rem;
+  --badge-border-radius--medium: 0.375rem;
+  --badge-width--large: 1.5rem;
+  --badge-height--large: 1.5rem;
+  --badge-border-radius--large: 0.75rem;
+  --badge-width--x-large: 2rem;
+  --badge-height--x-large: 2rem;
+  --badge-border-radius--x-large: 1rem;
+}
+
+.dnb-badge {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: absolute;
+  box-sizing: border-box;
+  overflow: hidden;
+  z-index: 2; // Render the badge on top of a potential .dnb-img img.
+
+  &__root {
+    position: relative;
+    display: inline-flex;
+    // For correct alignment with the text.
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
+
+  // Safari needs a correct CSS specificity
+  &,
+  .dnb-core-style & {
+    line-height: var(--button-height);
+  }
+
+  // size small
+  &--size-small {
+    width: var(--badge-width--small);
+    height: var(--badge-height--small);
+    border-radius: var(--badge-border-radius--small);
+    font-size: var(--badge-font-size--small);
+
+    // Safari needs a correct CSS specificity
+    &,
+    .dnb-core-style & {
+      line-height: var(--badge-line-height--small);
+    }
+  }
+
+  // size medium
+  &--size-medium {
+    width: var(--badge-width--medium);
+    height: var(--badge-height--medium);
+    border-radius: var(--badge-border-radius--medium);
+    font-size: var(--badge-font-size--medium);
+
+    // Safari needs a correct CSS specificity
+    &,
+    .dnb-core-style & {
+      line-height: var(--badge-line-height--medium);
+    }
+  }
+
+  // size large
+  &--size-large {
+    width: var(--badge-width--large);
+    height: var(--badge-height--large);
+    border-radius: var(--badge-border-radius--large);
+    font-size: var(--badge-font-size--large);
+
+    // Safari needs a correct CSS specificity
+    &,
+    .dnb-core-style & {
+      line-height: var(--badge-line-height--large);
+    }
+  }
+
+  // size x-large
+  &--size-x-large {
+    width: var(--badge-width--x-large);
+    height: var(--badge-height--x-large);
+    border-radius: var(--badge-border-radius--x-large);
+    font-size: var(--badge-font-size--x-large);
+
+    // Safari needs a correct CSS specificity
+    &,
+    .dnb-core-style & {
+      line-height: var(--badge-line-height--x-large);
+    }
+  }
+
+  &--has-text#{&}--size-small {
+    min-width: var(--badge-width--small);
+    width: auto;
+    padding: 0 1px;
+  }
+
+  &--has-text#{&}--size-medium {
+    min-width: var(--badge-width--medium);
+    width: auto;
+    padding: 0 2px;
+  }
+
+  &--has-text#{&}--size-large {
+    min-width: var(--badge-width--large);
+    width: auto;
+    padding: 0 6px;
+  }
+
+  &--has-text#{&}--size-x-large {
+    min-width: var(--badge-width--x-large);
+    width: auto;
+    padding: 0 6px;
+  }
+
+  // horizontal left
+  &--horizontal-left {
+    left: 0;
+  }
+
+  // horizontal right
+  &--horizontal-right {
+    right: 0;
+  }
+
+  // vertical bottom
+  &--vertical-bottom {
+    bottom: 0;
+  }
+
+  // vertical top
+  &--vertical-top {
+    top: 0;
+  }
+}

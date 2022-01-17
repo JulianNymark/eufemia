@@ -13,6 +13,7 @@
 import Accordion from './components/accordion/Accordion'
 import Autocomplete from './components/autocomplete/Autocomplete'
 import Avatar from './components/avatar/Avatar'
+import Badge from './components/badge/Badge'
 import Breadcrumb from './components/breadcrumb/Breadcrumb'
 import Button from './components/button/Button'
 import Checkbox from './components/checkbox/Checkbox'
@@ -82,6 +83,7 @@ export {
   Accordion,
   Autocomplete,
   Avatar,
+  Badge,
   Breadcrumb,
   Button,
   Checkbox,

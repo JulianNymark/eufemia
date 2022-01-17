@@ -15,6 +15,7 @@ import { registerElement } from '../shared/component-helper'
 import Accordion from './accordion/Accordion'
 import Autocomplete from './autocomplete/Autocomplete'
 import Avatar from './avatar/Avatar'
+import Badge from './badge/Badge'
 import Breadcrumb from './breadcrumb/Breadcrumb'
 import Button from './button/Button'
 import Checkbox from './checkbox/Checkbox'
@@ -55,6 +56,7 @@ export {
   Accordion,
   Autocomplete,
   Avatar,
+  Badge,
   Breadcrumb,
   Button,
   Checkbox,
@@ -96,6 +98,7 @@ export const getComponents = () => {
     Accordion,
     Autocomplete,
     Avatar,
+    Badge,
     Breadcrumb,
     Button,
     Checkbox,
