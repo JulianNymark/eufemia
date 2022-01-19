@@ -37,9 +37,13 @@ Checkboxes are used to let a user select one or more options of a limited number
 
 The DatePicker component should be used whenever there is to enter a single date or a date range/period with a start and end date.
 
+## [Dialog](/uilib/components/dialog)
+
+The Dialog component is a [Modal](/uilib/components/modal) variation that appears at the center of the screen.
+
 ## [Drawer](/uilib/components/drawer)
 
-The Drawer component is a part of (mode) the Modal component because they have many similarities.
+The Drawer component is a [Modal](/uilib/components/modal) variation that appears as a side panel.
 
 ## [Dropdown](/uilib/components/dropdown)
 
