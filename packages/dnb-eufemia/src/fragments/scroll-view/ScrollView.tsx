@@ -14,21 +14,19 @@ import Context from '../../shared/Context'
 import { createSpacingClasses } from '../../components/space/SpacingHelper'
 import { ISpacingProps } from '../../shared/interfaces'
 
-export interface ScrollViewProps extends ISpacingProps {
+export interface ScrollViewProps
+  extends ISpacingProps,
+    Omit<React.HTMLAttributes<'div'>, 'title'> {
   className?: string
   children?: string | React.ReactNode | ((...args: any[]) => any)
-  innerRef?: any
+  innerRef?: React.RefObject<HTMLElement> | React.ForwardedRef<unknown>
   class?: string
-  // All other props
-  [x: string]: any
 }
 
-class ScrollView extends React.PureComponent<
-  ScrollViewProps & React.ComponentPropsWithoutRef<'div'>
-> {
+class ScrollView extends React.PureComponent<ScrollViewProps> {
   static tagName = 'dnb-scroll-view'
   static contextType = Context
-  ref: any
+  ref: React.RefObject<HTMLElement>
 
   static getContent(props) {
     if (props.text) return props.text
