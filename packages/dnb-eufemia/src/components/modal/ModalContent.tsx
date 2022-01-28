@@ -54,7 +54,7 @@ export default class ModalContent extends React.PureComponent<
 > {
   state = { triggeredBy: null, triggeredByEvent: null, color: null }
 
-  _contentRef: React.RefObject<any>
+  _contentRef: React.RefObject<HTMLElement>
   _id: string
   _lockTimeout: NodeJS.Timeout
   _focusTimeout: NodeJS.Timeout
@@ -62,7 +62,7 @@ export default class ModalContent extends React.PureComponent<
   _ii: InteractionInvalidation
   _iiLocal: InteractionInvalidation
 
-  constructor(props) {
+  constructor(props: ModalContentProps) {
     super(props)
     this._contentRef = React.createRef()
 
@@ -455,9 +455,9 @@ export default class ModalContent extends React.PureComponent<
         <div
           id={contentId}
           style={
-            color
+            (color
               ? { '--modal-background-color': `var(--color-${color})` }
-              : null
+              : null) as CSSPropertiesWithVars
           }
           {...contentParams}
         >

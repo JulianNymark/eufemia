@@ -122,7 +122,7 @@ export const DialogSandbox = () => (
         fullscreen={false}
         alignContent="centered"
         hideCloseButton
-        triggerIcon="bell"
+        triggerAttributes={{ icon: 'bell' }}
         // prevent_close
         maxWidth="12rem"
       >

@@ -313,9 +313,6 @@ export interface ModalContentProps {
    * The displayed text for the 'close' button. Defaults to `Lukk`.
    */
   close_title?: string
-
-  // Other props
-  [x: string]: any
 }
 
 export type TriggerAttributes = {

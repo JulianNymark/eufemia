@@ -24,6 +24,7 @@ import { ModalProps } from './types'
 import { ModalPropsV2 } from './typesV2'
 import ModalHeader from './parts/ModalHeader'
 import ModalHeaderBar from './parts/ModalHeaderBar'
+import { ScrollViewProps } from '../../fragments/scroll-view/ScrollView'
 import CloseButton from './parts/CloseButton'
 import ModalRoot from './ModalRoot'
 import { ISpacingProps } from '../../shared/interfaces'
@@ -36,7 +37,7 @@ interface ModalState {
 }
 
 class Modal extends React.PureComponent<
-  ModalProps & ModalPropsV2 & ISpacingProps,
+  ModalProps & ModalPropsV2 & ISpacingProps & ScrollViewProps,
   ModalState
 > {
   static contextType = Context
@@ -521,34 +522,4 @@ class Modal extends React.PureComponent<
 
 export { CloseButton }
 
-/* class EnhancedModal extends React.PureComponent<
-  ModalProps & ModalPropsV2 & ISpacingProps,
-  ModalState
-> {
-  static contextType = Context
-  static tagName = 'dnb-modal'
-  static Bar = ModalHeaderBar
-  static Header = ModalHeader
-  static Content = ModalInner
-  static Inner = ModalInner // deprecated
-
-  static getContent(props) {
-    if (typeof props.modal_content === 'string') {
-      return props.modal_content
-    } else if (typeof props.modal_content === 'function') {
-      return props.modal_content(props)
-    }
-    return processChildren(props)
-  }
-  static enableWebComponent() {
-    registerElement(Modal?.tagName, Modal, Modal.defaultProps)
-  }
-
-  render() {
-    const newProps = convertCamelCaseProps(this.props)
-
-    return <Modal {...newProps}>{this.props.children}</Modal>
-  }
-}
- */
 export default Modal

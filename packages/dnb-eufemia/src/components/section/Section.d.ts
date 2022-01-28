@@ -34,7 +34,7 @@ export type SectionChildren =
   | ((...args: any[]) => any)
   | React.ReactNode;
 
-export interface SectionProps {
+export interface SectionProps extends React.HTMLProps<HTMLElement> {
   /**
    * To define the style of the visual helper. Use and `Style ID` from below. Defaults to `mint-green-12`.
    */
@@ -78,8 +78,6 @@ export interface SectionProps {
   class?: string;
   className?: string;
   children?: SectionChildren;
-
-  [x: string]: any;
 }
 export default class Section extends React.Component<SectionProps, any> {
   static defaultProps: object;
