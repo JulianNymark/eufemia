@@ -12,10 +12,12 @@ import {
 import ScrollView from '../../fragments/scroll-view/ScrollView'
 import DialogHeader from './parts/DialogHeader'
 import DialogNavigation from './parts/DialogNavigation'
+import { getContent } from '../modal/helpers'
 import ModalContext from '../modal/ModalContext'
-import Modal from '../modal/Modal'
 import { checkMinMaxWidth } from '../drawer/helpers'
 import { DialogContentProps } from './types'
+import ModalHeaderBar from '../modal/parts/ModalHeaderBar'
+import ModalHeader from '../modal/parts/ModalHeader'
 
 export default function DialogContent({
   modalContent = null,
@@ -37,7 +39,7 @@ export default function DialogContent({
   const { minWidth, maxWidth } = checkMinMaxWidth(min_width, max_width)
   const content =
     modalContent ||
-    Modal.getContent(
+    getContent(
       typeof rest.children === 'function'
         ? Object.freeze({ ...rest, close: context?.close })
         : rest
@@ -68,12 +70,12 @@ export default function DialogContent({
 
   const navExists = findElementInChildren(
     content,
-    (cur) => cur.type === DialogNavigation || cur.type === Modal.Bar
+    (cur) => cur.type === DialogNavigation || cur.type === ModalHeaderBar
   )
 
   const headerExists = findElementInChildren(
     content,
-    (cur) => cur.type === DialogHeader || cur.type === Modal.Header
+    (cur) => cur.type === DialogHeader || cur.type === ModalHeader
   )
   return (
     <ScrollView {...innerParams}>
