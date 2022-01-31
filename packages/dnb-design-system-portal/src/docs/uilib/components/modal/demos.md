@@ -22,7 +22,9 @@ ModalExampleModeCustom
 
 See Dialog and Drawer demos for more examples.
 
-## Modal V1 Demos
+## Previous Modal demos
+
+The following demos are from the previous Modal version. This type of functionality will be _deprecated_ in the future, but is provided here as help for previous implementations of Modal. We recommend everyone to update the implemented Modal components to either Drawer or Dialog.
 
 ### Triggered by the help button
 

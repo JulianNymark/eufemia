@@ -452,38 +452,6 @@ export const toSnakeCase = (str) =>
 export const toKebabCase = (str) =>
   str.replace(/\B[A-Z]/g, (letter) => `-${letter}`).toLowerCase()
 
-export const convertCamelCaseProps = (props) => {
-  const newProps = { ...props }
-  for (const key in props) {
-    if (/^[a-z]+[A-Z]/.test(key)) {
-      newProps[toSnakeCase(key)] = props[key]
-      delete newProps[key]
-    }
-  }
-  return newProps
-}
-
-/**
- * A React Higher-Order Component (HOC) function which takes in a component with both snake_case and camelCase props,
- * and converts all props to snake_case. The snake_case props are sent to the WrappedComponent.
- *
- * For components that only support snake_case props, but (also) receive camelCase props.
- *
- * @param {*} WrappedComponent
- * @returns EnhancedComponent
- */
-export const withCamelCaseProps = (WrappedComponent) => {
-  return class extends React.Component {
-    render() {
-      const newProps = convertCamelCaseProps(this.props)
-      return (
-        <WrappedComponent {...newProps}>
-          {this.props.children}
-        </WrappedComponent>
-      )
-    }
-  }
-}
 // Removed as we now run function props from Web Components (custom-element)
 // export const pickRenderProps = (props, renderProps) =>
 //   Object.entries(props)
