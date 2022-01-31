@@ -13,9 +13,11 @@ import ScrollView from '../../fragments/scroll-view/ScrollView'
 import DrawerHeader from './parts/DrawerHeader'
 import DrawerNavigation from './parts/DrawerNavigation'
 import ModalContext from '../modal/ModalContext'
-import Modal from '../modal/Modal'
+import { getContent } from '../modal/helpers'
 import { DrawerContentProps } from './types'
 import { checkMinMaxWidth } from './helpers'
+import ModalHeaderBar from '../modal/parts/ModalHeaderBar'
+import ModalHeader from '../modal/parts/ModalHeader'
 
 export default function DrawerContent({
   modalContent = null,
@@ -38,7 +40,7 @@ export default function DrawerContent({
   const { minWidth, maxWidth } = checkMinMaxWidth(min_width, max_width)
   const content =
     modalContent ||
-    Modal.getContent(
+    getContent(
       typeof rest.children === 'function'
         ? Object.freeze({ ...rest, close: context?.close })
         : rest
@@ -71,12 +73,12 @@ export default function DrawerContent({
 
   const navExists = findElementInChildren(
     content,
-    (cur) => cur.type === DrawerNavigation || cur.type === Modal.Bar
+    (cur) => cur.type === DrawerNavigation || cur.type === ModalHeaderBar
   )
 
   const headerExists = findElementInChildren(
     content,
-    (cur) => cur.type === DrawerHeader || cur.type === Modal.Header
+    (cur) => cur.type === DrawerHeader || cur.type === ModalHeader
   )
 
   return (
