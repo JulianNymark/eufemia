@@ -2,9 +2,19 @@
   "compileOnSave": false,
   "compilerOptions": {
     "jsx": "react-jsx",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "types": ["node", "jest"],
+    "sourceMap": true,
+    "outDir": "./out",
+    "rootDir": ".",
+    "baseUrl": ".",
     "paths": {
       "Pages/*": ["./src/docs/*"]
     }
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", ".cache", "public"]
 }
