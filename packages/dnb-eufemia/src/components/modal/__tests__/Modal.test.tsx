@@ -14,7 +14,7 @@ import {
 } from '../../../core/jest/jestSetup'
 
 import Input from '../../input/Input'
-import Component from '../Modal'
+import Component, { OriginalComponent } from '../Modal'
 import Button from '../../button/Button'
 import Provider from '../../../shared/Provider'
 import * as helpers from '../../../shared/helpers'
@@ -1047,11 +1047,12 @@ describe('Modal component', () => {
 
   it('has to have a close button', () => {
     const Comp = mount(<Component {...props} />)
-    Comp.setState({
+    Comp.find(OriginalComponent).setState({
       modalActive: true,
     })
     expect(
-      Comp.find('button.dnb-modal__close-button')
+      Comp.find(OriginalComponent)
+        .find('button.dnb-modal__close-button')
         .instance()
         .textContent.replace(/\u200C/g, '')
     ).toBe('Lukk')
@@ -1059,11 +1060,12 @@ describe('Modal component', () => {
 
   it('has to have a default dialog title', () => {
     const Comp = mount(<Component {...props} title={undefined} />)
-    Comp.setState({
+    Comp.find(OriginalComponent).setState({
       modalActive: true,
     })
     expect(
-      Comp.find('.dnb-modal__content')
+      Comp.find(OriginalComponent)
+        .find('.dnb-modal__content')
         .instance()
         .getAttribute('aria-label')
     ).toContain('Vindu')
@@ -1071,7 +1073,8 @@ describe('Modal component', () => {
     Comp.setProps({ title: 'now there is a title' })
 
     expect(
-      Comp.find('.dnb-modal__content')
+      Comp.find(OriginalComponent)
+        .find('.dnb-modal__content')
         .instance()
         .hasAttribute('aria-label')
     ).toBe(false)
@@ -1081,16 +1084,18 @@ describe('Modal component', () => {
     const Comp = mount(<Component {...props} />, {
       attachTo: attachToBody(),
     })
-    Comp.setState({
+    Comp.find(OriginalComponent).setState({
       modalActive: true,
     })
     expect(
-      Comp.find('.dnb-modal__content')
+      Comp.find(OriginalComponent)
+        .find('.dnb-modal__content')
         .instance()
         .getAttribute('aria-labelledby')
     ).toBe('dnb-modal-modal_id-title')
     expect(
-      Comp.find('.dnb-modal__content')
+      Comp.find(OriginalComponent)
+        .find('.dnb-modal__content')
         .instance()
         .getAttribute('aria-describedby')
     ).toBe('dnb-modal-modal_id-content')

@@ -28,6 +28,12 @@ import { ScrollViewProps } from '../../fragments/scroll-view/ScrollView'
 import CloseButton from './parts/CloseButton'
 import ModalRoot from './ModalRoot'
 import { ISpacingProps } from '../../shared/interfaces'
+import {
+  withCamelCaseProps,
+  IncludeCamelCase,
+  classWithCamelCaseProps,
+  ToCamelCase,
+} from '../../shared/helpers/withCamelCaseProps'
 
 export const ANIMATION_DURATION = 300
 
@@ -36,8 +42,13 @@ interface ModalState {
   modalActive: boolean
 }
 
+type ModalPropTypes = ModalProps &
+  ModalPropsV2 &
+  ISpacingProps &
+  ScrollViewProps
+
 class Modal extends React.PureComponent<
-  ModalProps & ModalPropsV2 & ISpacingProps & ScrollViewProps,
+  ModalPropTypes & ToCamelCase<ModalPropTypes>,
   ModalState
 > {
   static contextType = Context
@@ -520,6 +531,6 @@ class Modal extends React.PureComponent<
   }
 }
 
-export { CloseButton }
+export { CloseButton, Modal as OriginalComponent }
 
-export default Modal
+export default classWithCamelCaseProps(Modal)

@@ -58,76 +58,71 @@ exports[`Modal component have to match snapshot 1`] = `
   trigger_title={null}
   trigger_variant="secondary"
 >
-  <HelpButtonInstance
-    class={null}
-    className="dnb-modal__trigger"
-    disabled={null}
-    hidden={false}
-    icon={null}
-    icon_position="left"
-    id="modal_id"
-    innerRef={
+  <Modal
+    0={
       Object {
-        "current": <button
-          aria-describedby="modal_id-tooltip"
-          aria-label="modal_title"
-          aria-roledescription="Hjelp-knapp"
-          class="dnb-button dnb-button--secondary dnb-help-button dnb-modal__trigger dnb-button--icon-position-left dnb-button--has-icon dnb-button--size-medium"
-          id="modal_id"
-          type="button"
-        >
-          <span
-            class="dnb-button__alignment"
-          >
-            ‌
-          </span>
-          <span
-            aria-hidden="true"
-            class="dnb-icon dnb-icon--default dnb-button__icon dnb-icon--inherit-color"
-            data-test-id="question icon"
-            role="presentation"
-          >
-            <svg
-              fill="none"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                clip-rule="evenodd"
-                d="M6.14209 4.87551C6.14232 3.67087 7.22313 2.67293 8.41439 2.7553C9.61616 2.83839 10.5374 3.98528 10.3733 5.16806C10.2669 5.93479 9.70614 6.622 8.97633 6.88003C8.01504 7.2199 7.663 8.0029 7.55047 8.70632C7.49611 9.04614 7.49129 9.39066 7.49667 9.69131C7.49941 9.84464 7.50394 9.97113 7.5081 10.0873C7.51321 10.2303 7.51777 10.3576 7.51777 10.5002C7.51777 10.9144 7.85356 11.2502 8.26777 11.2502C8.68199 11.2502 9.01777 10.9144 9.01777 10.5002C9.01777 10.3504 9.01151 10.1615 9.00563 9.98422L9.00563 9.98418C9.00177 9.86783 8.99807 9.75649 8.99643 9.66448C8.99154 9.39108 8.99836 9.15128 9.03164 8.94327C9.09438 8.55103 9.22163 8.38429 9.47633 8.29424C10.7347 7.84936 11.6756 6.69619 11.8591 5.37421C12.1418 3.33617 10.5922 1.40229 8.51785 1.25887C6.4652 1.11695 4.64249 2.79596 4.64209 4.87522C4.64201 5.28944 4.97773 5.62529 5.39195 5.62537C5.80616 5.62545 6.14201 5.28972 6.14209 4.87551ZM8.25 14.5C8.80228 14.5 9.25 14.0523 9.25 13.5C9.25 12.9477 8.80228 12.5 8.25 12.5C7.69772 12.5 7.25 12.9477 7.25 13.5C7.25 14.0523 7.69772 14.5 8.25 14.5Z"
-                fill="black"
-                fill-rule="evenodd"
-              />
-            </svg>
-          </span>
-        </button>,
+        "displayName": "Modal",
+        "props": Object {},
       }
     }
-    onClick={[Function]}
-    size={null}
-    text={null}
+    align_content="left"
+    animation_duration={300}
+    bar_content={null}
+    class={null}
+    className={null}
+    class_name={null}
+    close_button_attributes={null}
+    close_modal={null}
+    close_title="Lukk"
+    container_placement={null}
+    content_class={null}
+    content_id={null}
+    dialog_title="Vindu"
+    direct_dom_return={true}
+    disabled={null}
+    focus_selector={null}
+    fullscreen="auto"
+    header_content={null}
+    hide_close_button={false}
+    id="modal_id"
+    labelled_by={null}
+    max_width={null}
+    min_width={null}
+    modal_content="unique_modal_content"
+    no_animation={true}
+    no_animation_on_mobile={false}
+    on_close={null}
+    on_close_prevent={null}
+    on_open={null}
+    open_delay={null}
+    open_modal={null}
+    open_state={true}
+    overlay_class={null}
+    prevent_close={false}
+    prevent_core_style={false}
+    root_id="root"
+    spacing={true}
+    style_type="button"
     title="modal_title"
-    variant="secondary"
+    trigger={null}
+    trigger_attributes={null}
+    trigger_class={null}
+    trigger_disabled={null}
+    trigger_hidden={false}
+    trigger_icon={null}
+    trigger_icon_position="left"
+    trigger_size={null}
+    trigger_text={null}
+    trigger_title={null}
+    trigger_variant="secondary"
   >
-    <Button
-      aria-label="modal_title"
-      aria-roledescription="Hjelp-knapp"
-      bounding={null}
+    <HelpButtonInstance
       class={null}
-      className="dnb-help-button dnb-modal__trigger"
-      custom_content={null}
-      custom_element={null}
-      custom_method={null}
+      className="dnb-modal__trigger"
       disabled={null}
-      element={null}
-      global_status_id={null}
       hidden={false}
-      href={null}
-      icon="question"
+      icon={null}
       icon_position="left"
-      icon_size={null}
       id="modal_id"
       innerRef={
         Object {
@@ -168,200 +163,31 @@ exports[`Modal component have to match snapshot 1`] = `
           </button>,
         }
       }
-      inner_ref={null}
       onClick={[Function]}
-      on_click={null}
       size={null}
-      skeleton={null}
-      status={null}
-      status_no_animation={null}
-      status_props={null}
-      status_state="error"
-      stretch={null}
       text={null}
-      title={null}
-      to={null}
-      tooltip="modal_title"
-      type={null}
+      title="modal_title"
       variant="secondary"
-      wrap={null}
     >
-      <button
+      <Button
         aria-label="modal_title"
         aria-roledescription="Hjelp-knapp"
-        className="dnb-button dnb-button--secondary dnb-help-button dnb-modal__trigger dnb-button--icon-position-left dnb-button--has-icon dnb-button--size-medium"
-        disabled={false}
-        hidden={false}
-        id="modal_id"
-        onClick={[Function]}
-        type="button"
-      >
-        <Content
-          aria-label="modal_title"
-          aria-roledescription="Hjelp-knapp"
-          bounding={null}
-          class={null}
-          className="dnb-help-button dnb-modal__trigger"
-          content={null}
-          custom_content={null}
-          custom_element={null}
-          custom_method={null}
-          disabled={null}
-          element={null}
-          global_status_id={null}
-          hidden={false}
-          href={null}
-          icon="question"
-          icon_position="left"
-          icon_size={null}
-          id="modal_id"
-          innerRef={
-            Object {
-              "current": <button
-                aria-describedby="modal_id-tooltip"
-                aria-label="modal_title"
-                aria-roledescription="Hjelp-knapp"
-                class="dnb-button dnb-button--secondary dnb-help-button dnb-modal__trigger dnb-button--icon-position-left dnb-button--has-icon dnb-button--size-medium"
-                id="modal_id"
-                type="button"
-              >
-                <span
-                  class="dnb-button__alignment"
-                >
-                  ‌
-                </span>
-                <span
-                  aria-hidden="true"
-                  class="dnb-icon dnb-icon--default dnb-button__icon dnb-icon--inherit-color"
-                  data-test-id="question icon"
-                  role="presentation"
-                >
-                  <svg
-                    fill="none"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    width="16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M6.14209 4.87551C6.14232 3.67087 7.22313 2.67293 8.41439 2.7553C9.61616 2.83839 10.5374 3.98528 10.3733 5.16806C10.2669 5.93479 9.70614 6.622 8.97633 6.88003C8.01504 7.2199 7.663 8.0029 7.55047 8.70632C7.49611 9.04614 7.49129 9.39066 7.49667 9.69131C7.49941 9.84464 7.50394 9.97113 7.5081 10.0873C7.51321 10.2303 7.51777 10.3576 7.51777 10.5002C7.51777 10.9144 7.85356 11.2502 8.26777 11.2502C8.68199 11.2502 9.01777 10.9144 9.01777 10.5002C9.01777 10.3504 9.01151 10.1615 9.00563 9.98422L9.00563 9.98418C9.00177 9.86783 8.99807 9.75649 8.99643 9.66448C8.99154 9.39108 8.99836 9.15128 9.03164 8.94327C9.09438 8.55103 9.22163 8.38429 9.47633 8.29424C10.7347 7.84936 11.6756 6.69619 11.8591 5.37421C12.1418 3.33617 10.5922 1.40229 8.51785 1.25887C6.4652 1.11695 4.64249 2.79596 4.64209 4.87522C4.64201 5.28944 4.97773 5.62529 5.39195 5.62537C5.80616 5.62545 6.14201 5.28972 6.14209 4.87551ZM8.25 14.5C8.80228 14.5 9.25 14.0523 9.25 13.5C9.25 12.9477 8.80228 12.5 8.25 12.5C7.69772 12.5 7.25 12.9477 7.25 13.5C7.25 14.0523 7.69772 14.5 8.25 14.5Z"
-                      fill="black"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-              </button>,
-            }
-          }
-          inner_ref={null}
-          isIconOnly={true}
-          onClick={[Function]}
-          on_click={null}
-          size={null}
-          skeleton={false}
-          status={null}
-          status_no_animation={null}
-          status_props={null}
-          status_state="error"
-          stretch={null}
-          text={null}
-          title={null}
-          to={null}
-          tooltip="modal_title"
-          type={null}
-          variant="secondary"
-          wrap={null}
-        >
-          <span
-            className="dnb-button__alignment"
-            key="button-text-empty"
-          >
-            ‌
-          </span>
-          <IconPrimary
-            alt={null}
-            aria-hidden={null}
-            attributes={null}
-            border={null}
-            className="dnb-button__icon"
-            color={null}
-            height={null}
-            icon="question"
-            inherit_color={true}
-            key="button-icon"
-            modifier={null}
-            size={null}
-            skeleton={false}
-            title={null}
-            width={null}
-          >
-            <span
-              aria-hidden={true}
-              className="dnb-icon dnb-icon--default dnb-button__icon dnb-icon--inherit-color"
-              data-test-id="question icon"
-              role="presentation"
-            >
-              <question>
-                <svg
-                  fill="none"
-                  height={16}
-                  viewBox="0 0 16 16"
-                  width={16}
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    clipRule="evenodd"
-                    d="M6.14209 4.87551C6.14232 3.67087 7.22313 2.67293 8.41439 2.7553C9.61616 2.83839 10.5374 3.98528 10.3733 5.16806C10.2669 5.93479 9.70614 6.622 8.97633 6.88003C8.01504 7.2199 7.663 8.0029 7.55047 8.70632C7.49611 9.04614 7.49129 9.39066 7.49667 9.69131C7.49941 9.84464 7.50394 9.97113 7.5081 10.0873C7.51321 10.2303 7.51777 10.3576 7.51777 10.5002C7.51777 10.9144 7.85356 11.2502 8.26777 11.2502C8.68199 11.2502 9.01777 10.9144 9.01777 10.5002C9.01777 10.3504 9.01151 10.1615 9.00563 9.98422L9.00563 9.98418C9.00177 9.86783 8.99807 9.75649 8.99643 9.66448C8.99154 9.39108 8.99836 9.15128 9.03164 8.94327C9.09438 8.55103 9.22163 8.38429 9.47633 8.29424C10.7347 7.84936 11.6756 6.69619 11.8591 5.37421C12.1418 3.33617 10.5922 1.40229 8.51785 1.25887C6.4652 1.11695 4.64249 2.79596 4.64209 4.87522C4.64201 5.28944 4.97773 5.62529 5.39195 5.62537C5.80616 5.62545 6.14201 5.28972 6.14209 4.87551ZM8.25 14.5C8.80228 14.5 9.25 14.0523 9.25 13.5C9.25 12.9477 8.80228 12.5 8.25 12.5C7.69772 12.5 7.25 12.9477 7.25 13.5C7.25 14.0523 7.69772 14.5 8.25 14.5Z"
-                    fill="black"
-                    fillRule="evenodd"
-                  />
-                </svg>
-              </question>
-            </span>
-          </IconPrimary>
-        </Content>
-      </button>
-      <FormStatus
-        attributes={null}
+        bounding={null}
         class={null}
-        className={null}
+        className="dnb-help-button dnb-modal__trigger"
+        custom_content={null}
+        custom_element={null}
+        custom_method={null}
+        disabled={null}
+        element={null}
         global_status_id={null}
-        icon="error"
-        icon_size="medium"
-        id="modal_id-form-status"
-        label={null}
-        no_animation={null}
-        role={null}
-        show={null}
-        size="default"
-        skeleton={null}
-        state="error"
-        status="error"
-        stretch={null}
-        text={null}
-        text_id="modal_id-status"
-        title={null}
-        variant={null}
-        width_element={null}
-        width_selector={null}
-      />
-      <Tooltip
-        active={null}
-        align={null}
-        animate_position={false}
-        arrow="center"
-        class={null}
-        className={null}
-        fixed_position={false}
-        group="main"
-        hide_delay={500}
-        id="modal_id-tooltip"
-        no_animation={false}
-        position="top"
-        show_delay={300}
-        size="basis"
-        target_element={
+        hidden={false}
+        href={null}
+        icon="question"
+        icon_position="left"
+        icon_size={null}
+        id="modal_id"
+        innerRef={
           Object {
             "current": <button
               aria-describedby="modal_id-tooltip"
@@ -400,69 +226,199 @@ exports[`Modal component have to match snapshot 1`] = `
             </button>,
           }
         }
-        target_selector={null}
+        inner_ref={null}
+        onClick={[Function]}
+        on_click={null}
+        size={null}
+        skeleton={null}
+        status={null}
+        status_no_animation={null}
+        status_props={null}
+        status_state="error"
+        stretch={null}
+        text={null}
+        title={null}
+        to={null}
         tooltip="modal_title"
+        type={null}
+        variant="secondary"
+        wrap={null}
       >
-        <TooltipWithEvents
+        <button
+          aria-label="modal_title"
+          aria-roledescription="Hjelp-knapp"
+          className="dnb-button dnb-button--secondary dnb-help-button dnb-modal__trigger dnb-button--icon-position-left dnb-button--has-icon dnb-button--size-medium"
+          disabled={false}
+          hidden={false}
+          id="modal_id"
+          onClick={[Function]}
+          type="button"
+        >
+          <Content
+            aria-label="modal_title"
+            aria-roledescription="Hjelp-knapp"
+            bounding={null}
+            class={null}
+            className="dnb-help-button dnb-modal__trigger"
+            content={null}
+            custom_content={null}
+            custom_element={null}
+            custom_method={null}
+            disabled={null}
+            element={null}
+            global_status_id={null}
+            hidden={false}
+            href={null}
+            icon="question"
+            icon_position="left"
+            icon_size={null}
+            id="modal_id"
+            innerRef={
+              Object {
+                "current": <button
+                  aria-describedby="modal_id-tooltip"
+                  aria-label="modal_title"
+                  aria-roledescription="Hjelp-knapp"
+                  class="dnb-button dnb-button--secondary dnb-help-button dnb-modal__trigger dnb-button--icon-position-left dnb-button--has-icon dnb-button--size-medium"
+                  id="modal_id"
+                  type="button"
+                >
+                  <span
+                    class="dnb-button__alignment"
+                  >
+                    ‌
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="dnb-icon dnb-icon--default dnb-button__icon dnb-icon--inherit-color"
+                    data-test-id="question icon"
+                    role="presentation"
+                  >
+                    <svg
+                      fill="none"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M6.14209 4.87551C6.14232 3.67087 7.22313 2.67293 8.41439 2.7553C9.61616 2.83839 10.5374 3.98528 10.3733 5.16806C10.2669 5.93479 9.70614 6.622 8.97633 6.88003C8.01504 7.2199 7.663 8.0029 7.55047 8.70632C7.49611 9.04614 7.49129 9.39066 7.49667 9.69131C7.49941 9.84464 7.50394 9.97113 7.5081 10.0873C7.51321 10.2303 7.51777 10.3576 7.51777 10.5002C7.51777 10.9144 7.85356 11.2502 8.26777 11.2502C8.68199 11.2502 9.01777 10.9144 9.01777 10.5002C9.01777 10.3504 9.01151 10.1615 9.00563 9.98422L9.00563 9.98418C9.00177 9.86783 8.99807 9.75649 8.99643 9.66448C8.99154 9.39108 8.99836 9.15128 9.03164 8.94327C9.09438 8.55103 9.22163 8.38429 9.47633 8.29424C10.7347 7.84936 11.6756 6.69619 11.8591 5.37421C12.1418 3.33617 10.5922 1.40229 8.51785 1.25887C6.4652 1.11695 4.64249 2.79596 4.64209 4.87522C4.64201 5.28944 4.97773 5.62529 5.39195 5.62537C5.80616 5.62545 6.14201 5.28972 6.14209 4.87551ZM8.25 14.5C8.80228 14.5 9.25 14.0523 9.25 13.5C9.25 12.9477 8.80228 12.5 8.25 12.5C7.69772 12.5 7.25 12.9477 7.25 13.5C7.25 14.0523 7.69772 14.5 8.25 14.5Z"
+                        fill="black"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </button>,
+              }
+            }
+            inner_ref={null}
+            isIconOnly={true}
+            onClick={[Function]}
+            on_click={null}
+            size={null}
+            skeleton={false}
+            status={null}
+            status_no_animation={null}
+            status_props={null}
+            status_state="error"
+            stretch={null}
+            text={null}
+            title={null}
+            to={null}
+            tooltip="modal_title"
+            type={null}
+            variant="secondary"
+            wrap={null}
+          >
+            <span
+              className="dnb-button__alignment"
+              key="button-text-empty"
+            >
+              ‌
+            </span>
+            <IconPrimary
+              alt={null}
+              aria-hidden={null}
+              attributes={null}
+              border={null}
+              className="dnb-button__icon"
+              color={null}
+              height={null}
+              icon="question"
+              inherit_color={true}
+              key="button-icon"
+              modifier={null}
+              size={null}
+              skeleton={false}
+              title={null}
+              width={null}
+            >
+              <span
+                aria-hidden={true}
+                className="dnb-icon dnb-icon--default dnb-button__icon dnb-icon--inherit-color"
+                data-test-id="question icon"
+                role="presentation"
+              >
+                <question>
+                  <svg
+                    fill="none"
+                    height={16}
+                    viewBox="0 0 16 16"
+                    width={16}
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      clipRule="evenodd"
+                      d="M6.14209 4.87551C6.14232 3.67087 7.22313 2.67293 8.41439 2.7553C9.61616 2.83839 10.5374 3.98528 10.3733 5.16806C10.2669 5.93479 9.70614 6.622 8.97633 6.88003C8.01504 7.2199 7.663 8.0029 7.55047 8.70632C7.49611 9.04614 7.49129 9.39066 7.49667 9.69131C7.49941 9.84464 7.50394 9.97113 7.5081 10.0873C7.51321 10.2303 7.51777 10.3576 7.51777 10.5002C7.51777 10.9144 7.85356 11.2502 8.26777 11.2502C8.68199 11.2502 9.01777 10.9144 9.01777 10.5002C9.01777 10.3504 9.01151 10.1615 9.00563 9.98422L9.00563 9.98418C9.00177 9.86783 8.99807 9.75649 8.99643 9.66448C8.99154 9.39108 8.99836 9.15128 9.03164 8.94327C9.09438 8.55103 9.22163 8.38429 9.47633 8.29424C10.7347 7.84936 11.6756 6.69619 11.8591 5.37421C12.1418 3.33617 10.5922 1.40229 8.51785 1.25887C6.4652 1.11695 4.64249 2.79596 4.64209 4.87522C4.64201 5.28944 4.97773 5.62529 5.39195 5.62537C5.80616 5.62545 6.14201 5.28972 6.14209 4.87551ZM8.25 14.5C8.80228 14.5 9.25 14.0523 9.25 13.5C9.25 12.9477 8.80228 12.5 8.25 12.5C7.69772 12.5 7.25 12.9477 7.25 13.5C7.25 14.0523 7.69772 14.5 8.25 14.5Z"
+                      fill="black"
+                      fillRule="evenodd"
+                    />
+                  </svg>
+                </question>
+              </span>
+            </IconPrimary>
+          </Content>
+        </button>
+        <FormStatus
+          attributes={null}
+          class={null}
+          className={null}
+          global_status_id={null}
+          icon="error"
+          icon_size="medium"
+          id="modal_id-form-status"
+          label={null}
+          no_animation={null}
+          role={null}
+          show={null}
+          size="default"
+          skeleton={null}
+          state="error"
+          status="error"
+          stretch={null}
+          text={null}
+          text_id="modal_id-status"
+          title={null}
+          variant={null}
+          width_element={null}
+          width_selector={null}
+        />
+        <Tooltip
+          active={null}
           align={null}
           animate_position={false}
           arrow="center"
-          attributes={
-            Object {
-              "children": "modal_title",
-              "className": "dnb-tooltip",
-            }
-          }
           class={null}
           className={null}
           fixed_position={false}
-          group="modal_id-tooltip"
+          group="main"
           hide_delay={500}
           id="modal_id-tooltip"
-          internal_id="modal_id-tooltip"
           no_animation={false}
           position="top"
           show_delay={300}
           size="basis"
-          target={
-            Object {
-              "current": <button
-                aria-describedby="modal_id-tooltip"
-                aria-label="modal_title"
-                aria-roledescription="Hjelp-knapp"
-                class="dnb-button dnb-button--secondary dnb-help-button dnb-modal__trigger dnb-button--icon-position-left dnb-button--has-icon dnb-button--size-medium"
-                id="modal_id"
-                type="button"
-              >
-                <span
-                  class="dnb-button__alignment"
-                >
-                  ‌
-                </span>
-                <span
-                  aria-hidden="true"
-                  class="dnb-icon dnb-icon--default dnb-button__icon dnb-icon--inherit-color"
-                  data-test-id="question icon"
-                  role="presentation"
-                >
-                  <svg
-                    fill="none"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    width="16"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      clip-rule="evenodd"
-                      d="M6.14209 4.87551C6.14232 3.67087 7.22313 2.67293 8.41439 2.7553C9.61616 2.83839 10.5374 3.98528 10.3733 5.16806C10.2669 5.93479 9.70614 6.622 8.97633 6.88003C8.01504 7.2199 7.663 8.0029 7.55047 8.70632C7.49611 9.04614 7.49129 9.39066 7.49667 9.69131C7.49941 9.84464 7.50394 9.97113 7.5081 10.0873C7.51321 10.2303 7.51777 10.3576 7.51777 10.5002C7.51777 10.9144 7.85356 11.2502 8.26777 11.2502C8.68199 11.2502 9.01777 10.9144 9.01777 10.5002C9.01777 10.3504 9.01151 10.1615 9.00563 9.98422L9.00563 9.98418C9.00177 9.86783 8.99807 9.75649 8.99643 9.66448C8.99154 9.39108 8.99836 9.15128 9.03164 8.94327C9.09438 8.55103 9.22163 8.38429 9.47633 8.29424C10.7347 7.84936 11.6756 6.69619 11.8591 5.37421C12.1418 3.33617 10.5922 1.40229 8.51785 1.25887C6.4652 1.11695 4.64249 2.79596 4.64209 4.87522C4.64201 5.28944 4.97773 5.62529 5.39195 5.62537C5.80616 5.62545 6.14201 5.28972 6.14209 4.87551ZM8.25 14.5C8.80228 14.5 9.25 14.0523 9.25 13.5C9.25 12.9477 8.80228 12.5 8.25 12.5C7.69772 12.5 7.25 12.9477 7.25 13.5C7.25 14.0523 7.69772 14.5 8.25 14.5Z"
-                      fill="black"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-              </button>,
-            }
-          }
           target_element={
             Object {
               "current": <button
@@ -505,8 +461,7 @@ exports[`Modal component have to match snapshot 1`] = `
           target_selector={null}
           tooltip="modal_title"
         >
-          <TooltipPortal
-            active={false}
+          <TooltipWithEvents
             align={null}
             animate_position={false}
             arrow="center"
@@ -523,47 +478,48 @@ exports[`Modal component have to match snapshot 1`] = `
             hide_delay={500}
             id="modal_id-tooltip"
             internal_id="modal_id-tooltip"
-            key="tooltip"
             no_animation={false}
             position="top"
             show_delay={300}
             size="basis"
             target={
-              <button
-                aria-describedby="modal_id-tooltip"
-                aria-label="modal_title"
-                aria-roledescription="Hjelp-knapp"
-                class="dnb-button dnb-button--secondary dnb-help-button dnb-modal__trigger dnb-button--icon-position-left dnb-button--has-icon dnb-button--size-medium"
-                id="modal_id"
-                type="button"
-              >
-                <span
-                  class="dnb-button__alignment"
+              Object {
+                "current": <button
+                  aria-describedby="modal_id-tooltip"
+                  aria-label="modal_title"
+                  aria-roledescription="Hjelp-knapp"
+                  class="dnb-button dnb-button--secondary dnb-help-button dnb-modal__trigger dnb-button--icon-position-left dnb-button--has-icon dnb-button--size-medium"
+                  id="modal_id"
+                  type="button"
                 >
-                  ‌
-                </span>
-                <span
-                  aria-hidden="true"
-                  class="dnb-icon dnb-icon--default dnb-button__icon dnb-icon--inherit-color"
-                  data-test-id="question icon"
-                  role="presentation"
-                >
-                  <svg
-                    fill="none"
-                    height="16"
-                    viewBox="0 0 16 16"
-                    width="16"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <span
+                    class="dnb-button__alignment"
                   >
-                    <path
-                      clip-rule="evenodd"
-                      d="M6.14209 4.87551C6.14232 3.67087 7.22313 2.67293 8.41439 2.7553C9.61616 2.83839 10.5374 3.98528 10.3733 5.16806C10.2669 5.93479 9.70614 6.622 8.97633 6.88003C8.01504 7.2199 7.663 8.0029 7.55047 8.70632C7.49611 9.04614 7.49129 9.39066 7.49667 9.69131C7.49941 9.84464 7.50394 9.97113 7.5081 10.0873C7.51321 10.2303 7.51777 10.3576 7.51777 10.5002C7.51777 10.9144 7.85356 11.2502 8.26777 11.2502C8.68199 11.2502 9.01777 10.9144 9.01777 10.5002C9.01777 10.3504 9.01151 10.1615 9.00563 9.98422L9.00563 9.98418C9.00177 9.86783 8.99807 9.75649 8.99643 9.66448C8.99154 9.39108 8.99836 9.15128 9.03164 8.94327C9.09438 8.55103 9.22163 8.38429 9.47633 8.29424C10.7347 7.84936 11.6756 6.69619 11.8591 5.37421C12.1418 3.33617 10.5922 1.40229 8.51785 1.25887C6.4652 1.11695 4.64249 2.79596 4.64209 4.87522C4.64201 5.28944 4.97773 5.62529 5.39195 5.62537C5.80616 5.62545 6.14201 5.28972 6.14209 4.87551ZM8.25 14.5C8.80228 14.5 9.25 14.0523 9.25 13.5C9.25 12.9477 8.80228 12.5 8.25 12.5C7.69772 12.5 7.25 12.9477 7.25 13.5C7.25 14.0523 7.69772 14.5 8.25 14.5Z"
-                      fill="black"
-                      fill-rule="evenodd"
-                    />
-                  </svg>
-                </span>
-              </button>
+                    ‌
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="dnb-icon dnb-icon--default dnb-button__icon dnb-icon--inherit-color"
+                    data-test-id="question icon"
+                    role="presentation"
+                  >
+                    <svg
+                      fill="none"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M6.14209 4.87551C6.14232 3.67087 7.22313 2.67293 8.41439 2.7553C9.61616 2.83839 10.5374 3.98528 10.3733 5.16806C10.2669 5.93479 9.70614 6.622 8.97633 6.88003C8.01504 7.2199 7.663 8.0029 7.55047 8.70632C7.49611 9.04614 7.49129 9.39066 7.49667 9.69131C7.49941 9.84464 7.50394 9.97113 7.5081 10.0873C7.51321 10.2303 7.51777 10.3576 7.51777 10.5002C7.51777 10.9144 7.85356 11.2502 8.26777 11.2502C8.68199 11.2502 9.01777 10.9144 9.01777 10.5002C9.01777 10.3504 9.01151 10.1615 9.00563 9.98422L9.00563 9.98418C9.00177 9.86783 8.99807 9.75649 8.99643 9.66448C8.99154 9.39108 8.99836 9.15128 9.03164 8.94327C9.09438 8.55103 9.22163 8.38429 9.47633 8.29424C10.7347 7.84936 11.6756 6.69619 11.8591 5.37421C12.1418 3.33617 10.5922 1.40229 8.51785 1.25887C6.4652 1.11695 4.64249 2.79596 4.64209 4.87522C4.64201 5.28944 4.97773 5.62529 5.39195 5.62537C5.80616 5.62545 6.14201 5.28972 6.14209 4.87551ZM8.25 14.5C8.80228 14.5 9.25 14.0523 9.25 13.5C9.25 12.9477 8.80228 12.5 8.25 12.5C7.69772 12.5 7.25 12.9477 7.25 13.5C7.25 14.0523 7.69772 14.5 8.25 14.5Z"
+                        fill="black"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </button>,
+              }
             }
             target_element={
               Object {
@@ -606,57 +562,114 @@ exports[`Modal component have to match snapshot 1`] = `
             }
             target_selector={null}
             tooltip="modal_title"
-          />
-        </TooltipWithEvents>
-      </Tooltip>
-    </Button>
-  </HelpButtonInstance>
-  <ModalRoot
-    0={
-      Object {
-        "displayName": "Modal",
-        "props": Object {},
-      }
-    }
-    align_content="left"
-    animation_duration={300}
-    bar_content={null}
-    class={null}
-    className={null}
-    closeModal={[Function]}
-    close_button_attributes={null}
-    close_modal={null}
-    close_title="Lukk"
-    container_placement={null}
-    content_class={null}
-    content_id="dnb-modal-modal_id"
-    dialog_title="Separat Vindu"
-    direct_dom_return={true}
-    focus_selector={null}
-    fullscreen="auto"
-    header_content={null}
-    hide={false}
-    hide_close_button={false}
-    id="modal_id"
-    labelled_by={null}
-    max_width={null}
-    min_width={null}
-    modal_content="unique_modal_content"
-    no_animation={true}
-    no_animation_on_mobile={false}
-    on_close={null}
-    on_close_prevent={null}
-    on_open={null}
-    open_modal={null}
-    overlay_class={null}
-    prevent_close={false}
-    prevent_core_style={false}
-    root_id="root"
-    spacing={true}
-    style_type="button"
-    title="modal_title"
-  >
-    <ModalContent
+          >
+            <TooltipPortal
+              active={false}
+              align={null}
+              animate_position={false}
+              arrow="center"
+              attributes={
+                Object {
+                  "children": "modal_title",
+                  "className": "dnb-tooltip",
+                }
+              }
+              class={null}
+              className={null}
+              fixed_position={false}
+              group="modal_id-tooltip"
+              hide_delay={500}
+              id="modal_id-tooltip"
+              internal_id="modal_id-tooltip"
+              key="tooltip"
+              no_animation={false}
+              position="top"
+              show_delay={300}
+              size="basis"
+              target={
+                <button
+                  aria-describedby="modal_id-tooltip"
+                  aria-label="modal_title"
+                  aria-roledescription="Hjelp-knapp"
+                  class="dnb-button dnb-button--secondary dnb-help-button dnb-modal__trigger dnb-button--icon-position-left dnb-button--has-icon dnb-button--size-medium"
+                  id="modal_id"
+                  type="button"
+                >
+                  <span
+                    class="dnb-button__alignment"
+                  >
+                    ‌
+                  </span>
+                  <span
+                    aria-hidden="true"
+                    class="dnb-icon dnb-icon--default dnb-button__icon dnb-icon--inherit-color"
+                    data-test-id="question icon"
+                    role="presentation"
+                  >
+                    <svg
+                      fill="none"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      width="16"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M6.14209 4.87551C6.14232 3.67087 7.22313 2.67293 8.41439 2.7553C9.61616 2.83839 10.5374 3.98528 10.3733 5.16806C10.2669 5.93479 9.70614 6.622 8.97633 6.88003C8.01504 7.2199 7.663 8.0029 7.55047 8.70632C7.49611 9.04614 7.49129 9.39066 7.49667 9.69131C7.49941 9.84464 7.50394 9.97113 7.5081 10.0873C7.51321 10.2303 7.51777 10.3576 7.51777 10.5002C7.51777 10.9144 7.85356 11.2502 8.26777 11.2502C8.68199 11.2502 9.01777 10.9144 9.01777 10.5002C9.01777 10.3504 9.01151 10.1615 9.00563 9.98422L9.00563 9.98418C9.00177 9.86783 8.99807 9.75649 8.99643 9.66448C8.99154 9.39108 8.99836 9.15128 9.03164 8.94327C9.09438 8.55103 9.22163 8.38429 9.47633 8.29424C10.7347 7.84936 11.6756 6.69619 11.8591 5.37421C12.1418 3.33617 10.5922 1.40229 8.51785 1.25887C6.4652 1.11695 4.64249 2.79596 4.64209 4.87522C4.64201 5.28944 4.97773 5.62529 5.39195 5.62537C5.80616 5.62545 6.14201 5.28972 6.14209 4.87551ZM8.25 14.5C8.80228 14.5 9.25 14.0523 9.25 13.5C9.25 12.9477 8.80228 12.5 8.25 12.5C7.69772 12.5 7.25 12.9477 7.25 13.5C7.25 14.0523 7.69772 14.5 8.25 14.5Z"
+                        fill="black"
+                        fill-rule="evenodd"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              }
+              target_element={
+                Object {
+                  "current": <button
+                    aria-describedby="modal_id-tooltip"
+                    aria-label="modal_title"
+                    aria-roledescription="Hjelp-knapp"
+                    class="dnb-button dnb-button--secondary dnb-help-button dnb-modal__trigger dnb-button--icon-position-left dnb-button--has-icon dnb-button--size-medium"
+                    id="modal_id"
+                    type="button"
+                  >
+                    <span
+                      class="dnb-button__alignment"
+                    >
+                      ‌
+                    </span>
+                    <span
+                      aria-hidden="true"
+                      class="dnb-icon dnb-icon--default dnb-button__icon dnb-icon--inherit-color"
+                      data-test-id="question icon"
+                      role="presentation"
+                    >
+                      <svg
+                        fill="none"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        width="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          clip-rule="evenodd"
+                          d="M6.14209 4.87551C6.14232 3.67087 7.22313 2.67293 8.41439 2.7553C9.61616 2.83839 10.5374 3.98528 10.3733 5.16806C10.2669 5.93479 9.70614 6.622 8.97633 6.88003C8.01504 7.2199 7.663 8.0029 7.55047 8.70632C7.49611 9.04614 7.49129 9.39066 7.49667 9.69131C7.49941 9.84464 7.50394 9.97113 7.5081 10.0873C7.51321 10.2303 7.51777 10.3576 7.51777 10.5002C7.51777 10.9144 7.85356 11.2502 8.26777 11.2502C8.68199 11.2502 9.01777 10.9144 9.01777 10.5002C9.01777 10.3504 9.01151 10.1615 9.00563 9.98422L9.00563 9.98418C9.00177 9.86783 8.99807 9.75649 8.99643 9.66448C8.99154 9.39108 8.99836 9.15128 9.03164 8.94327C9.09438 8.55103 9.22163 8.38429 9.47633 8.29424C10.7347 7.84936 11.6756 6.69619 11.8591 5.37421C12.1418 3.33617 10.5922 1.40229 8.51785 1.25887C6.4652 1.11695 4.64249 2.79596 4.64209 4.87522C4.64201 5.28944 4.97773 5.62529 5.39195 5.62537C5.80616 5.62545 6.14201 5.28972 6.14209 4.87551ZM8.25 14.5C8.80228 14.5 9.25 14.0523 9.25 13.5C9.25 12.9477 8.80228 12.5 8.25 12.5C7.69772 12.5 7.25 12.9477 7.25 13.5C7.25 14.0523 7.69772 14.5 8.25 14.5Z"
+                          fill="black"
+                          fill-rule="evenodd"
+                        />
+                      </svg>
+                    </span>
+                  </button>,
+                }
+              }
+              target_selector={null}
+              tooltip="modal_title"
+            />
+          </TooltipWithEvents>
+        </Tooltip>
+      </Button>
+    </HelpButtonInstance>
+    <ModalRoot
       0={
         Object {
           "displayName": "Modal",
@@ -668,6 +681,7 @@ exports[`Modal component have to match snapshot 1`] = `
       bar_content={null}
       class={null}
       className={null}
+      class_name={null}
       closeModal={[Function]}
       close_button_attributes={null}
       close_modal={null}
@@ -676,6 +690,7 @@ exports[`Modal component have to match snapshot 1`] = `
       content_class={null}
       content_id="dnb-modal-modal_id"
       dialog_title="Separat Vindu"
+      direct_dom_return={true}
       focus_selector={null}
       fullscreen="auto"
       header_content={null}
@@ -700,85 +715,106 @@ exports[`Modal component have to match snapshot 1`] = `
       style_type="button"
       title="modal_title"
     >
-      <div
-        aria-describedby="dnb-modal-modal_id-content"
-        aria-labelledby="dnb-modal-modal_id-title"
-        aria-modal={true}
-        className="dnb-modal__content dnb-modal__content--auto-fullscreen dnb-modal__content--modal"
-        id="dnb-modal-modal_id"
-        onClick={[Function]}
-        role="dialog"
-        style={null}
-      >
-        <DialogContent
-          0={
-            Object {
-              "displayName": "Modal",
-              "props": Object {},
-            }
+      <ModalContent
+        0={
+          Object {
+            "displayName": "Modal",
+            "props": Object {},
           }
-          alignContent="left"
-          class={null}
-          className={null}
-          close_modal={null}
-          containerPlacement={null}
-          focus_selector={null}
-          fullscreen="auto"
-          headerContent={null}
-          maxWidth={null}
-          minWidth={null}
-          modalContent="unique_modal_content"
-          navContent={null}
-          noAnimation={true}
-          noAnimationOnMobile={false}
-          on_close={null}
-          on_close_prevent={null}
-          on_open={null}
-          open_modal={null}
-          preventCoreStyle={false}
-          prevent_close={false}
-          root_id="root"
-          spacing={true}
-          style_type="button"
-          title="modal_title"
+        }
+        align_content="left"
+        animation_duration={300}
+        bar_content={null}
+        class={null}
+        className={null}
+        class_name={null}
+        closeModal={[Function]}
+        close_button_attributes={null}
+        close_modal={null}
+        close_title="Lukk"
+        container_placement={null}
+        content_class={null}
+        content_id="dnb-modal-modal_id"
+        dialog_title="Separat Vindu"
+        focus_selector={null}
+        fullscreen="auto"
+        header_content={null}
+        hide={false}
+        hide_close_button={false}
+        id="modal_id"
+        labelled_by={null}
+        max_width={null}
+        min_width={null}
+        modal_content="unique_modal_content"
+        no_animation={true}
+        no_animation_on_mobile={false}
+        on_close={null}
+        on_close_prevent={null}
+        on_open={null}
+        open_modal={null}
+        overlay_class={null}
+        prevent_close={false}
+        prevent_core_style={false}
+        root_id="root"
+        spacing={true}
+        style_type="button"
+        title="modal_title"
+      >
+        <div
+          aria-describedby="dnb-modal-modal_id-content"
+          aria-labelledby="dnb-modal-modal_id-title"
+          aria-modal={true}
+          className="dnb-modal__content dnb-modal__content--auto-fullscreen dnb-modal__content--modal"
+          id="dnb-modal-modal_id"
+          onClick={[Function]}
+          role="dialog"
+          style={null}
         >
-          <ForwardRef(ScrollViewRef)
+          <DialogContent
             0={
               Object {
                 "displayName": "Modal",
                 "props": Object {},
               }
             }
-            className="dnb-dialog dnb-dialog--auto-fullscreen dnb-core-style dnb-dialog--spacing dnb-dialog__align--left dnb-dialog--no-animation"
+            alignContent="left"
+            class={null}
+            className={null}
+            class_name={null}
             close_modal={null}
             containerPlacement={null}
             focus_selector={null}
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            onTouchStart={[Function]}
+            fullscreen="auto"
+            headerContent={null}
+            maxWidth={null}
+            minWidth={null}
+            modalContent="unique_modal_content"
+            navContent={null}
+            noAnimation={true}
+            noAnimationOnMobile={false}
             on_close={null}
             on_close_prevent={null}
             on_open={null}
             open_modal={null}
+            preventCoreStyle={false}
             prevent_close={false}
             root_id="root"
-            style={null}
+            spacing={true}
             style_type="button"
             title="modal_title"
           >
-            <ScrollView
+            <ForwardRef(ScrollViewRef)
               0={
                 Object {
                   "displayName": "Modal",
                   "props": Object {},
                 }
               }
-              class={null}
               className="dnb-dialog dnb-dialog--auto-fullscreen dnb-core-style dnb-dialog--spacing dnb-dialog__align--left dnb-dialog--no-animation"
+              class_name={null}
               close_modal={null}
               containerPlacement={null}
               focus_selector={null}
-              innerRef={null}
               onClick={[Function]}
               onKeyDown={[Function]}
               onTouchStart={[Function]}
@@ -792,307 +828,335 @@ exports[`Modal component have to match snapshot 1`] = `
               style_type="button"
               title="modal_title"
             >
-              <div
-                className="dnb-scroll-view dnb-dialog dnb-dialog--auto-fullscreen dnb-core-style dnb-dialog--spacing dnb-dialog__align--left dnb-dialog--no-animation"
+              <ScrollView
+                0={
+                  Object {
+                    "displayName": "Modal",
+                    "props": Object {},
+                  }
+                }
+                class={null}
+                className="dnb-dialog dnb-dialog--auto-fullscreen dnb-core-style dnb-dialog--spacing dnb-dialog__align--left dnb-dialog--no-animation"
+                class_name={null}
+                close_modal={null}
+                containerPlacement={null}
+                focus_selector={null}
+                innerRef={null}
                 onClick={[Function]}
                 onKeyDown={[Function]}
                 onTouchStart={[Function]}
+                on_close={null}
+                on_close_prevent={null}
+                on_open={null}
+                open_modal={null}
+                prevent_close={false}
+                root_id="root"
+                style={null}
+                style_type="button"
                 title="modal_title"
               >
                 <div
-                  className="dnb-dialog__inner dnb-no-focus"
-                  tabIndex={-1}
+                  className="dnb-scroll-view dnb-dialog dnb-dialog--auto-fullscreen dnb-core-style dnb-dialog--spacing dnb-dialog__align--left dnb-dialog--no-animation"
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  onTouchStart={[Function]}
+                  title="modal_title"
                 >
-                  <DialogNavigation>
-                    <ModalHeaderBar
-                      className="dnb-dialog__navigation"
-                    >
-                      <Section
-                        class={null}
-                        className="dnb-modal__header__bar dnb-dialog__navigation dnb-dialog__navigation"
-                        element="section"
-                        inner_ref={
-                          Object {
-                            "current": <section
-                              class="dnb-section dnb-section--white dnb-modal__header__bar dnb-dialog__navigation dnb-dialog__navigation"
-                            >
-                              <div
-                                class="dnb-modal__header__bar__inner"
-                              />
-                              <div
-                                class="dnb-modal__header__bar__close"
-                              >
-                                <button
-                                  class="dnb-button dnb-button--tertiary dnb-button--has-text dnb-modal__close-button dnb-button--icon-position-left dnb-button--has-icon dnb-button--size-large"
-                                  type="button"
-                                >
-                                  <span
-                                    class="dnb-button__alignment"
-                                  >
-                                    ‌
-                                  </span>
-                                  <span
-                                    class="dnb-button__text dnb-skeleton--show-font"
-                                  >
-                                    Lukk
-                                  </span>
-                                  <span
-                                    aria-hidden="true"
-                                    class="dnb-icon dnb-icon--default dnb-button__icon dnb-icon--inherit-color"
-                                    data-test-id="close icon"
-                                    role="presentation"
-                                  >
-                                    <svg
-                                      fill="none"
-                                      height="16"
-                                      viewBox="0 0 16 16"
-                                      width="16"
-                                      xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                      <path
-                                        d="M3 13L13 3M13 13L3 3"
-                                        stroke="black"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="1.5"
-                                      />
-                                    </svg>
-                                  </span>
-                                </button>
-                              </div>
-                            </section>,
-                          }
-                        }
-                        spacing={null}
-                        style_type="white"
+                  <div
+                    className="dnb-dialog__inner dnb-no-focus"
+                    tabIndex={-1}
+                  >
+                    <DialogNavigation>
+                      <ModalHeaderBar
+                        className="dnb-dialog__navigation"
                       >
-                        <section
-                          className="dnb-section dnb-section--white dnb-modal__header__bar dnb-dialog__navigation dnb-dialog__navigation"
-                        >
-                          <div
-                            className="dnb-modal__header__bar__inner"
-                          />
-                          <div
-                            className="dnb-modal__header__bar__close"
-                          >
-                            <CloseButton
-                              className={null}
-                              close_title="Lukk"
-                              icon_position="left"
-                              on_click={[Function]}
-                              size="large"
-                            >
-                              <Button
-                                bounding={null}
-                                class={null}
-                                className="dnb-modal__close-button"
-                                custom_content={null}
-                                custom_element={null}
-                                custom_method={null}
-                                disabled={null}
-                                element={null}
-                                global_status_id={null}
-                                href={null}
-                                icon="close"
-                                icon_position="left"
-                                icon_size={null}
-                                id={null}
-                                innerRef={null}
-                                inner_ref={null}
-                                on_click={[Function]}
-                                size="large"
-                                skeleton={null}
-                                status={null}
-                                status_no_animation={null}
-                                status_props={null}
-                                status_state="error"
-                                stretch={null}
-                                text="Lukk"
-                                title={null}
-                                to={null}
-                                tooltip={null}
-                                type="button"
-                                variant="tertiary"
-                                wrap={null}
+                        <Section
+                          class={null}
+                          className="dnb-modal__header__bar dnb-dialog__navigation dnb-dialog__navigation"
+                          element="section"
+                          inner_ref={
+                            Object {
+                              "current": <section
+                                class="dnb-section dnb-section--white dnb-modal__header__bar dnb-dialog__navigation dnb-dialog__navigation"
                               >
-                                <button
-                                  className="dnb-button dnb-button--tertiary dnb-button--has-text dnb-modal__close-button dnb-button--icon-position-left dnb-button--has-icon dnb-button--size-large"
-                                  disabled={false}
-                                  onClick={[Function]}
-                                  type="button"
+                                <div
+                                  class="dnb-modal__header__bar__inner"
+                                />
+                                <div
+                                  class="dnb-modal__header__bar__close"
                                 >
-                                  <Content
-                                    bounding={null}
-                                    class={null}
-                                    className="dnb-modal__close-button"
-                                    content="Lukk"
-                                    custom_content={null}
-                                    custom_element={null}
-                                    custom_method={null}
-                                    disabled={null}
-                                    element={null}
-                                    global_status_id={null}
-                                    href={null}
-                                    icon="close"
-                                    icon_position="left"
-                                    icon_size={null}
-                                    id={null}
-                                    innerRef={null}
-                                    inner_ref={null}
-                                    isIconOnly={false}
-                                    on_click={[Function]}
-                                    size="large"
-                                    skeleton={false}
-                                    status={null}
-                                    status_no_animation={null}
-                                    status_props={null}
-                                    status_state="error"
-                                    stretch={null}
-                                    text="Lukk"
-                                    title={null}
-                                    to={null}
-                                    tooltip={null}
+                                  <button
+                                    class="dnb-button dnb-button--tertiary dnb-button--has-text dnb-modal__close-button dnb-button--icon-position-left dnb-button--has-icon dnb-button--size-large"
                                     type="button"
-                                    variant="tertiary"
-                                    wrap={null}
                                   >
                                     <span
-                                      className="dnb-button__alignment"
-                                      key="button-text-empty"
+                                      class="dnb-button__alignment"
                                     >
                                       ‌
                                     </span>
                                     <span
-                                      className="dnb-button__text dnb-skeleton--show-font"
-                                      key="button-text"
+                                      class="dnb-button__text dnb-skeleton--show-font"
                                     >
                                       Lukk
                                     </span>
-                                    <IconPrimary
-                                      alt={null}
-                                      aria-hidden={true}
-                                      attributes={null}
-                                      border={null}
-                                      className="dnb-button__icon"
-                                      color={null}
-                                      height={null}
+                                    <span
+                                      aria-hidden="true"
+                                      class="dnb-icon dnb-icon--default dnb-button__icon dnb-icon--inherit-color"
+                                      data-test-id="close icon"
+                                      role="presentation"
+                                    >
+                                      <svg
+                                        fill="none"
+                                        height="16"
+                                        viewBox="0 0 16 16"
+                                        width="16"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                      >
+                                        <path
+                                          d="M3 13L13 3M13 13L3 3"
+                                          stroke="black"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round"
+                                          stroke-width="1.5"
+                                        />
+                                      </svg>
+                                    </span>
+                                  </button>
+                                </div>
+                              </section>,
+                            }
+                          }
+                          spacing={null}
+                          style_type="white"
+                        >
+                          <section
+                            className="dnb-section dnb-section--white dnb-modal__header__bar dnb-dialog__navigation dnb-dialog__navigation"
+                          >
+                            <div
+                              className="dnb-modal__header__bar__inner"
+                            />
+                            <div
+                              className="dnb-modal__header__bar__close"
+                            >
+                              <CloseButton
+                                className={null}
+                                close_title="Lukk"
+                                icon_position="left"
+                                on_click={[Function]}
+                                size="large"
+                              >
+                                <Button
+                                  bounding={null}
+                                  class={null}
+                                  className="dnb-modal__close-button"
+                                  custom_content={null}
+                                  custom_element={null}
+                                  custom_method={null}
+                                  disabled={null}
+                                  element={null}
+                                  global_status_id={null}
+                                  href={null}
+                                  icon="close"
+                                  icon_position="left"
+                                  icon_size={null}
+                                  id={null}
+                                  innerRef={null}
+                                  inner_ref={null}
+                                  on_click={[Function]}
+                                  size="large"
+                                  skeleton={null}
+                                  status={null}
+                                  status_no_animation={null}
+                                  status_props={null}
+                                  status_state="error"
+                                  stretch={null}
+                                  text="Lukk"
+                                  title={null}
+                                  to={null}
+                                  tooltip={null}
+                                  type="button"
+                                  variant="tertiary"
+                                  wrap={null}
+                                >
+                                  <button
+                                    className="dnb-button dnb-button--tertiary dnb-button--has-text dnb-modal__close-button dnb-button--icon-position-left dnb-button--has-icon dnb-button--size-large"
+                                    disabled={false}
+                                    onClick={[Function]}
+                                    type="button"
+                                  >
+                                    <Content
+                                      bounding={null}
+                                      class={null}
+                                      className="dnb-modal__close-button"
+                                      content="Lukk"
+                                      custom_content={null}
+                                      custom_element={null}
+                                      custom_method={null}
+                                      disabled={null}
+                                      element={null}
+                                      global_status_id={null}
+                                      href={null}
                                       icon="close"
-                                      inherit_color={true}
-                                      key="button-icon"
-                                      modifier={null}
-                                      size={null}
+                                      icon_position="left"
+                                      icon_size={null}
+                                      id={null}
+                                      innerRef={null}
+                                      inner_ref={null}
+                                      isIconOnly={false}
+                                      on_click={[Function]}
+                                      size="large"
                                       skeleton={false}
+                                      status={null}
+                                      status_no_animation={null}
+                                      status_props={null}
+                                      status_state="error"
+                                      stretch={null}
+                                      text="Lukk"
                                       title={null}
-                                      width={null}
+                                      to={null}
+                                      tooltip={null}
+                                      type="button"
+                                      variant="tertiary"
+                                      wrap={null}
                                     >
                                       <span
-                                        aria-hidden={true}
-                                        className="dnb-icon dnb-icon--default dnb-button__icon dnb-icon--inherit-color"
-                                        data-test-id="close icon"
-                                        role="presentation"
+                                        className="dnb-button__alignment"
+                                        key="button-text-empty"
                                       >
-                                        <close>
-                                          <svg
-                                            fill="none"
-                                            height={16}
-                                            viewBox="0 0 16 16"
-                                            width={16}
-                                            xmlns="http://www.w3.org/2000/svg"
-                                          >
-                                            <path
-                                              d="M3 13L13 3M13 13L3 3"
-                                              stroke="black"
-                                              strokeLinecap="round"
-                                              strokeLinejoin="round"
-                                              strokeWidth={1.5}
-                                            />
-                                          </svg>
-                                        </close>
+                                        ‌
                                       </span>
-                                    </IconPrimary>
-                                  </Content>
-                                </button>
-                                <FormStatus
-                                  attributes={null}
-                                  class={null}
-                                  className={null}
-                                  global_status_id={null}
-                                  icon="error"
-                                  icon_size="medium"
-                                  id="null-form-status"
-                                  label="Lukk"
-                                  no_animation={null}
-                                  role={null}
-                                  show={null}
-                                  size="default"
-                                  skeleton={null}
-                                  state="error"
-                                  status="error"
-                                  stretch={null}
-                                  text={null}
-                                  text_id="null-status"
-                                  title={null}
-                                  variant={null}
-                                  width_element={null}
-                                  width_selector={null}
-                                />
-                              </Button>
-                            </CloseButton>
-                          </div>
-                        </section>
-                      </Section>
-                    </ModalHeaderBar>
-                  </DialogNavigation>
-                  <DialogHeader
-                    title="modal_title"
-                  >
-                    <ModalHeader
-                      className="dnb-dialog__header"
-                      size="large"
+                                      <span
+                                        className="dnb-button__text dnb-skeleton--show-font"
+                                        key="button-text"
+                                      >
+                                        Lukk
+                                      </span>
+                                      <IconPrimary
+                                        alt={null}
+                                        aria-hidden={true}
+                                        attributes={null}
+                                        border={null}
+                                        className="dnb-button__icon"
+                                        color={null}
+                                        height={null}
+                                        icon="close"
+                                        inherit_color={true}
+                                        key="button-icon"
+                                        modifier={null}
+                                        size={null}
+                                        skeleton={false}
+                                        title={null}
+                                        width={null}
+                                      >
+                                        <span
+                                          aria-hidden={true}
+                                          className="dnb-icon dnb-icon--default dnb-button__icon dnb-icon--inherit-color"
+                                          data-test-id="close icon"
+                                          role="presentation"
+                                        >
+                                          <close>
+                                            <svg
+                                              fill="none"
+                                              height={16}
+                                              viewBox="0 0 16 16"
+                                              width={16}
+                                              xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                              <path
+                                                d="M3 13L13 3M13 13L3 3"
+                                                stroke="black"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth={1.5}
+                                              />
+                                            </svg>
+                                          </close>
+                                        </span>
+                                      </IconPrimary>
+                                    </Content>
+                                  </button>
+                                  <FormStatus
+                                    attributes={null}
+                                    class={null}
+                                    className={null}
+                                    global_status_id={null}
+                                    icon="error"
+                                    icon_size="medium"
+                                    id="null-form-status"
+                                    label="Lukk"
+                                    no_animation={null}
+                                    role={null}
+                                    show={null}
+                                    size="default"
+                                    skeleton={null}
+                                    state="error"
+                                    status="error"
+                                    stretch={null}
+                                    text={null}
+                                    text_id="null-status"
+                                    title={null}
+                                    variant={null}
+                                    width_element={null}
+                                    width_selector={null}
+                                  />
+                                </Button>
+                              </CloseButton>
+                            </div>
+                          </section>
+                        </Section>
+                      </ModalHeaderBar>
+                    </DialogNavigation>
+                    <DialogHeader
                       title="modal_title"
-                      title_class="dnb-dialog__title"
                     >
-                      <Section
-                        class={null}
-                        className="dnb-dialog__header dnb-dialog__header"
-                        element="section"
-                        id="dnb-modal-modal_id-title"
-                        inner_ref={null}
-                        spacing={null}
-                        style_type="white"
+                      <ModalHeader
+                        className="dnb-dialog__header"
+                        size="large"
+                        title="modal_title"
+                        title_class="dnb-dialog__title"
                       >
-                        <section
-                          className="dnb-section dnb-section--white dnb-dialog__header dnb-dialog__header"
+                        <Section
+                          class={null}
+                          className="dnb-dialog__header dnb-dialog__header"
+                          element="section"
                           id="dnb-modal-modal_id-title"
+                          inner_ref={null}
+                          spacing={null}
+                          style_type="white"
                         >
-                          <h1
-                            className="dnb-modal__title dnb-space__top--zero dnb-space__bottom--small dnb-h--large dnb-dialog__title dnb-dialog__title"
+                          <section
+                            className="dnb-section dnb-section--white dnb-dialog__header dnb-dialog__header"
+                            id="dnb-modal-modal_id-title"
                           >
-                            modal_title
-                          </h1>
-                          <div />
-                        </section>
-                      </Section>
-                    </ModalHeader>
-                  </DialogHeader>
-                  <div
-                    className="dnb-dialog__content"
-                    id="dnb-modal-modal_id-content"
-                  >
-                    unique_modal_content
+                            <h1
+                              className="dnb-modal__title dnb-space__top--zero dnb-space__bottom--small dnb-h--large dnb-dialog__title dnb-dialog__title"
+                            >
+                              modal_title
+                            </h1>
+                            <div />
+                          </section>
+                        </Section>
+                      </ModalHeader>
+                    </DialogHeader>
+                    <div
+                      className="dnb-dialog__content"
+                      id="dnb-modal-modal_id-content"
+                    >
+                      unique_modal_content
+                    </div>
                   </div>
                 </div>
-              </div>
-            </ScrollView>
-          </ForwardRef(ScrollViewRef)>
-        </DialogContent>
-      </div>
-      <span
-        aria-hidden="true"
-        className="dnb-modal__overlay dnb-modal__overlay--no-animation"
-      />
-    </ModalContent>
-  </ModalRoot>
+              </ScrollView>
+            </ForwardRef(ScrollViewRef)>
+          </DialogContent>
+        </div>
+        <span
+          aria-hidden="true"
+          className="dnb-modal__overlay dnb-modal__overlay--no-animation"
+        />
+      </ModalContent>
+    </ModalRoot>
+  </Modal>
 </Modal>
 `;
 
