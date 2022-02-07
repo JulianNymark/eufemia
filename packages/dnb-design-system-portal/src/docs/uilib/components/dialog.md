@@ -1,6 +1,6 @@
 ---
 title: 'Dialog'
-description: 'The Dialog component ...'
+description: 'The Dialog component is a Modal variation that appears at the center of the screen'
 order: 2
 status: 'new'
 showTabs: true
