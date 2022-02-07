@@ -1,7 +1,8 @@
+import { ToCamelCasePartial } from 'src/shared/helpers/withCamelCaseProps'
 import { ScrollViewProps } from '../../fragments/ScrollView'
-import { ModalPropsV2 } from '../modal/typesV2'
+import { ModalPropTypes } from '../modal/Modal'
 
-export interface DialogProps extends ModalPropsV2 {
+export interface DialogProps extends ToCamelCasePartial<ModalPropTypes> {
   /**
    * The dialog title. Displays on the very top of the content.
    */

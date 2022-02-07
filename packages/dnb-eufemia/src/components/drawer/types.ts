@@ -1,7 +1,8 @@
+import { ToCamelCasePartial } from 'src/shared/helpers/withCamelCaseProps'
 import { ScrollViewProps } from '../../fragments/ScrollView'
-import { ModalPropsV2 } from '../modal/typesV2'
+import { ModalPropTypes } from '../modal/Modal'
 
-export interface DrawerProps extends ModalPropsV2 {
+export interface DrawerProps extends ToCamelCasePartial<ModalPropTypes> {
   /**
    * Defines the placement on what side the Drawer should be opened. Can be set to `left`, `right`, `top` and `bottom`. Defaults to `right`.
    */
