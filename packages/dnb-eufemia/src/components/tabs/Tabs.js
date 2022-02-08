@@ -29,7 +29,7 @@ import {
   createSkeletonClass,
   skeletonDOMAttributes,
 } from '../skeleton/SkeletonHelper'
-import Button from '../button/Button'
+import Button, { ButtonProps } from '../button/Button'
 import whatInput from 'what-input'
 import CustomContent from './TabsCustomContent'
 import ContentWrapper from './TabsContentWrapper'
@@ -79,6 +79,9 @@ export default class Tabs extends React.PureComponent {
       PropTypes.node,
       PropTypes.func,
     ]),
+    tab_button_attributes:  PropTypes.oneOfType([
+      PropTypes.object,
+    ]),
     selected_key: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number,
@@ -121,6 +124,7 @@ export default class Tabs extends React.PureComponent {
     content_spacing: true,
     label: null,
     tab_element: 'button',
+    tab_button_attributes: null,
     selected_key: null,
     align: 'left',
     tabs_style: null,
@@ -285,7 +289,7 @@ export default class Tabs extends React.PureComponent {
       data
     )
 
-    // check if we have to open a diffrent tab
+    // check if we have to open a different tab
     if (props.use_hash && typeof window !== 'undefined') {
       try {
         const useHashKey = String(window.location.hash).replace('#', '')
@@ -1063,7 +1067,7 @@ Tip: Check out other solutions like <Tabs.Content id="unique">Your content, outs
   }
 
   TabsHandler = (props) => {
-    const { label, skeleton, tab_element } = { ...this._props, ...props }
+    const { tab_button_attributes, label, skeleton, tab_element } = { ...this._props, ...props }
     const { selected_key } = this.state
 
     const TabElement = tab_element || 'button'
@@ -1114,6 +1118,7 @@ Tip: Check out other solutions like <Tabs.Content id="unique">Your content, outs
               onClick={this.onClickHandler}
               onKeyUp={this.onKeyDownHandler}
               data-tab-key={key}
+              {...tab_button_attributes}
               {...itemParams}
             >
               <span
