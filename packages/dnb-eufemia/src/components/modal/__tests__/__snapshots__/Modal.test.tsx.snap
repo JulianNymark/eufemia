@@ -1807,6 +1807,9 @@ html[data-dnb-modal-active] {
     display: flex;
     flex-direction: row;
     justify-content: space-between; }
+    @media screen and (-ms-high-contrast: none) {
+      .dnb-modal__header__bar.dnb-section {
+        align-items: center; } }
   .dnb-modal__content--spacing .dnb-modal__header__bar.dnb-section {
     margin-top: calc(var(--modal-spacing) * 1.75);
     margin-bottom: calc(var(--modal-spacing) / 2); }
@@ -1866,6 +1869,9 @@ html[data-dnb-modal-active] {
     z-index: calc(var(--modal-z-index) + 4); }
   .dnb-modal__close-button {
     z-index: calc(var(--modal-z-index) + 1); }
+    @media screen and (-ms-high-contrast: none) {
+      .dnb-core-style .dnb-modal__close-button {
+        margin-left: auto; } }
 
 [data-visual-test].hide-page-content #___gatsby {
   opacity: 0; }

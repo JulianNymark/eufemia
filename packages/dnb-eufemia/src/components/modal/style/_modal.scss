@@ -334,6 +334,10 @@ html[data-dnb-modal-active] {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @include IS_IE() {
+      align-items: center; // IE11 uses top as default
+    }
   }
 
   &__content--spacing &__header__bar.dnb-section {
@@ -436,6 +440,12 @@ html[data-dnb-modal-active] {
   }
   &__close-button {
     z-index: calc(var(--modal-z-index) + 1);
+
+    @include IS_IE() {
+      .dnb-core-style & {
+        margin-left: auto; // place the button to the right side
+      }
+    }
   }
 }
 
